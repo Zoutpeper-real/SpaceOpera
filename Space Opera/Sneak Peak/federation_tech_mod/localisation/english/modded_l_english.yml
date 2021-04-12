@@ -1,0 +1,8 @@
+﻿l_english:
+ requires_technology_the_federation:2 "$TRIGGER_FAIL$§RRequires the §GFederations§! technology.§!"
+ 
+ tech_form_federations:0 "Federations"
+ tech_form_federations_desc:0 "We must build stable and lasting partnerships with our neighbors, based on trust and mutual respect. Together we are far stronger than we could ever hope to be alone.\n$TECH_UNLOCK_DIPLOMATIC_ACTION_CREATE_FEDERATION_TITLE$\n§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§!."
+
+ tech_entente_coordination:0 "Entente Coordination"
+ tech_entente_coordination_desc:0 "Perhaps the most important purpose of any successful interstellar federation is the mutual defense of its members. We have an obligation to contribute as much as we can.\nThe amount we contribute towards the §YFederation Naval Capacity§! counts for twice as much."
