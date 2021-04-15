@@ -111,7 +111,6 @@ trait_pioneering = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 	colony_start_num_pops_add = 1
-	planet_colony_development_speed_mult = 0.1
 }
 }
 
@@ -120,8 +119,7 @@ trait_crystalline_plating = {
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { LITHOID }
 	modifier = {
-		armies_attack_health_mult = 0.5
-
+		army_health = 0.5
 	}
 }
 
