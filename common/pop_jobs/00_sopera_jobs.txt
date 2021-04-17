@@ -1,0 +1,43 @@
+# Clone Job for origin_clone
+clone = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_clone_vats_origin
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		AND = {
+			specialist_job_check_trigger = yes
+			has_trait = trait_clone
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_clone
+		}
+		planet_pop_assembly_organic_add = 2.5
+	}
+	
+	resources = {
+		category = planet_pop_assemblers
+		produces = {
+			unity = 2.5
+			society_research = 2.5
+		}
+		upkeep = {
+			food = 3.5
+			energy = 5
+		}
+	}
+
+	weight = {
+		weight = 500
+	}
+}
