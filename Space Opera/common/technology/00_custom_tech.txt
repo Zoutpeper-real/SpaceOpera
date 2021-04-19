@@ -1,0 +1,40 @@
+# Form Federation
+tech_form_federations = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { statecraft }
+	weight = @tier3weight1
+
+	weight_modifier ={
+		modifier = {
+			factor = 0
+			years_passed < 50
+		}
+		
+		modifier = {
+			factor = 1
+			years_passed >= 50
+		}
+		
+		modifier = {
+			factor = 5
+			is_years_since_community_formation >= 40
+		}
+		
+	}
+}
+
+# entente coordination
+tech_entente_coordination = {
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { statecraft }
+	prerequisites = { "tech_form_federations" }
+	weight = @tier3weight1
+	
+	modifier = {
+		federation_naval_cap_contribution_mult = 1.00
+	}
+}

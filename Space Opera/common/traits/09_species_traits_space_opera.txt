@@ -106,13 +106,10 @@ trait_impressionable = {
 }
 
 trait_pioneering = {
-	cost = 3
+	cost = 2
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-	modifier = {
-	colony_start_num_pops_add = 1
-	planet_colony_development_speed_mult = 0.1
-}
+	custom_tooltip = TRAIT_PIONEERING_EFFECT
 }
 
 trait_crystalline_plating = {
@@ -120,12 +117,35 @@ trait_crystalline_plating = {
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { LITHOID }
 	modifier = {
-		armies_attack_health_mult = 0.5
-
+		army_health = 0.5
 	}
 }
 
 #Ethic Locked#
+
+trait_clone = {
+	icon = "gfx/interface/icons/traits/trait_clone.dds"
+	cost = 0
+	potential_crossbreeding_chance = 0
+	initial = no
+	randomized = no
+	modification = no
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.66
+		leader_age = -15
+	}
+
+	leader_age_min = 5
+	leader_age_max = 10
+	
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	opposites = { "trait_deviants" "trait_hive_mind" "trait_machine_unit" "trait_quarrelsome" "trait_rapid_breeders" "trait_slow_breeders"}
+	ai_weight = {
+		weight = 0
+	}
+}
 
 #valid_for_all_ethics = no
 #allowed_ethics = {

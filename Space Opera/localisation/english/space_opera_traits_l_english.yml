@@ -1,0 +1,23 @@
+﻿l_english:
+
+ ####################################
+ # Space Opera Localisation
+ ####################################
+ trait_carnivorous:0 "Carnivorus"
+ trait_carnivorous_desc:0 "§LMembers of this species have an evolutionary past of being apex predators, feeding exclusively on other animals and unable to conduct traditional farming techniques.§!"
+ trait_reactive_chemistry:0 "Reactive Chemistry"
+ trait_reactive_chemistry_desc:0 "§LThe silicate bonds that form the genetic structure of this species are highly unstable. Hence, their livespan is greatly reduced compared to similar lifeforms.§!"
+ trait_dignified:0 "Dignified"
+ trait_dignified_desc:0 "§LThose in positions of power of this species exhibit administrative qualities that are worthy of respect.§!"
+ trait_reverent:0 "Reverent"
+ trait_reverent_desc:0 "§LThis species displays an instinctual respect for authority and rarely question those who rule them.§!"
+ trait_dexterous:0 "Dexterous"
+ trait_dexterous_desc:0 "§LMembers of this species display an extraordinary ability to perform a difficult action quickly and skilfully.§!"
+ trait_impressionable:0 "Impressionable"
+ trait_impressionable_desc:0 "§LThis species is easily influenced because of a lack of critical ability, making them susceptible to suggestion.§!"
+ trait_pioneering:0 "Pioneering"
+ trait_pioneering_desc:0 "§LThe instinctual attitude of this species to venture afar has made them risk adverse to colonial efforts.§!"
+ trait_crystalline_plating:0 "Crystalline Plating"
+ trait_crystalline_plating_desc:0 "§LThis species has formed a uniquely durable exoskeleton made from crystalline structures in its natural environment.§!"
+ 
+ TRAIT_PIONEERING_EFFECT:4 "£job£ Colonists: Pop growth speed §G+20%§! and Habitability §G+10%§!"
