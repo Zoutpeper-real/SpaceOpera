@@ -7,7 +7,7 @@
 @buildings_t4 = 4
 
 # Colony
-building_colony_shelter = {
+building_ring_shelter = {
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -31,8 +31,8 @@ building_colony_shelter = {
 	}
 
 	convert_to = {
-		building_hive_capital
-		building_deployment_post
+		building_hive_ring_capital
+		building_deployment_ring_post
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
@@ -71,7 +71,7 @@ building_colony_shelter = {
 	}
 
 	upgrades = {
-		building_capital
+		building_ring_capital
 	}
 
 	triggered_desc = {
@@ -88,7 +88,7 @@ building_colony_shelter = {
 }
 
 # Planetary Administration
-building_capital = {
+building_ring_capital = {
 	base_buildtime = @b2_time
 	capital = yes
 	can_build = no
@@ -113,8 +113,8 @@ building_capital = {
 	}
 
 	convert_to = {
-		building_hive_capital
-		building_machine_capital
+		building_hive_ring_capital
+		building_machine_ring_capital
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
@@ -126,7 +126,7 @@ building_capital = {
 	}
 
 	upgrades = {
-		"building_major_capital"
+		"building_major_ring_capital"
 	}
 
 	prerequisites = {
@@ -329,7 +329,7 @@ building_capital = {
 }
 
 # Major Capital
-building_major_capital = {
+building_major_ring_capital = {
 	base_buildtime = @b3_time
 	capital = yes
 	can_build = no
@@ -358,8 +358,8 @@ building_major_capital = {
 	}
 
 	convert_to = {
-		building_hive_major_capital
-		building_machine_major_capital
+		building_hive_major_ring_capital
+		building_machine_major_ring_capital
 		building_resort_major_capital
 		building_slave_major_capital
 		building_ancient_control_center
@@ -587,11 +587,11 @@ building_major_capital = {
 	}
 
 	upgrades = {
-		"building_system_capital"
+		"building_system_ring_capital"
 	}
 }
 
-building_system_capital = {
+building_system_ring_capital = {
 	base_buildtime = @b4_time
 	capital = yes
 	can_build = no
@@ -616,9 +616,9 @@ building_system_capital = {
 	}
 
 	convert_to = {
-		building_hive_major_capital
-		building_machine_major_capital
-		building_major_capital
+		building_hive_major_ring_capital
+		building_machine_major_ring_capital
+		building_major_ring_capital
 		building_resort_major_capital
 		building_slave_major_capital
 		building_ancient_control_center
@@ -860,7 +860,7 @@ building_system_capital = {
 #############
 
 # Colony
-building_deployment_post = {
+building_deployment_ring_post = {
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -883,8 +883,8 @@ building_deployment_post = {
 	}
 
 	convert_to = {
-		building_hive_capital
-		building_colony_shelter
+		building_hive_ring_capital
+		building_ring_shelter
 		building_ancient_control_center
 		building_ancient_palace
 	}
@@ -917,7 +917,7 @@ building_deployment_post = {
 	}
 
 	upgrades = {
-		building_machine_capital
+		building_machine_ring_capital
 	}
 
 	triggered_desc = {
@@ -938,7 +938,7 @@ building_deployment_post = {
 }
 
 # Administrative Array
-building_machine_capital = {
+building_machine_ring_capital = {
 	base_buildtime = @b2_time
 	capital = yes
 	can_build = no
@@ -971,8 +971,8 @@ building_machine_capital = {
 	}
 
 	convert_to = {
-		building_hive_capital
-		building_colony_shelter
+		building_hive_ring_capital
+		building_ring_shelter
 		building_ancient_control_center
 		building_ancient_palace
 	}
@@ -1032,7 +1032,7 @@ building_machine_capital = {
 	}
 
 	upgrades = {
-		building_machine_major_capital
+		building_machine_major_ring_capital
 	}
 
 	triggered_desc = {
@@ -1049,7 +1049,7 @@ building_machine_capital = {
 }
 
 # Planetary Processor
-building_machine_major_capital = {
+building_machine_major_ring_capital = {
 	base_buildtime = @b3_time
 	capital = yes
 	can_build = no
@@ -1073,8 +1073,8 @@ building_machine_major_capital = {
 	}
 
 	convert_to = {
-		building_hive_major_capital
-		building_major_capital
+		building_hive_major_ring_capital
+		building_major_ring_capital
 		building_ancient_control_center
 		building_ancient_palace
 	}
@@ -1157,12 +1157,12 @@ building_machine_major_capital = {
 	}
 
 	upgrades = {
-		"building_machine_system_capital"
+		"building_machine_system_ring_capital"
 	}
 }
 
 # Primary Nexus
-building_machine_system_capital = {
+building_machine_system_ring_capital = {
 	base_buildtime = @b4_time
 	capital = yes
 	can_build = no
@@ -1186,9 +1186,9 @@ building_machine_system_capital = {
 	}
 
 	convert_to = {
-		building_hive_major_capital
-		building_major_capital
-		building_machine_major_capital
+		building_hive_major_ring_capital
+		building_major_ring_capital
+		building_machine_major_ring_capital
 		building_ancient_control_center
 		building_ancient_palace
 	}
@@ -1307,7 +1307,7 @@ building_machine_system_capital = {
 #############
 
 # Hive Core
-building_hive_capital = {
+building_hive_ring_capital = {
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -1335,14 +1335,14 @@ building_hive_capital = {
 	}
 
 	convert_to = {
-		building_machine_capital
-		building_capital
+		building_machine_ring_capital
+		building_ring_capital
 		building_ancient_control_center
 		building_ancient_palace
 	}
 
 	upgrades = {
-		"building_hive_major_capital"
+		"building_hive_major_ring_capital"
 	}
 
 	prerequisites = {
@@ -1398,7 +1398,7 @@ building_hive_capital = {
 }
 
 # Hive Nexus
-building_hive_major_capital = {
+building_hive_major_ring_capital = {
 	base_buildtime = @b2_time
 	capital = yes
 	can_build = no
@@ -1422,8 +1422,8 @@ building_hive_major_capital = {
 	}
 
 	convert_to = {
-		building_machine_major_capital
-		building_major_capital
+		building_machine_major_ring_capital
+		building_major_ring_capital
 		building_ancient_control_center
 		building_ancient_palace
 	}
