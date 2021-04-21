@@ -1,0 +1,16 @@
+﻿l_english:
+
+origin_relic:0 "Relic Hunters"
+origin_relic_desc:0 "This Species is obsessed with curating ancient Relicts. "
+civic_tooltip_relic:0 "Can build £building£ §Y$building_relic_archive$§!\n$building_relic_archive_tooltip$\n$job_relic_archivist_effect_desc$"
+building_relic_archive:0 "Relic Archive"
+building_relic_archives:0 "Relic Archives"
+building_relic_archive_tooltip:0 "§Y$building_relic_archives$§! increase §Y$MOD_SHIP_ANOMALY_GENERATION_CHANCE_MULT$§!"
+relic_archivist:0 "Relic Curator"
+job_relic_archivist:0 "Relic Curator"
+job_relic_archivist_desc:0 "Relic Curators preserve and study this civilizations ancient Artifacts."
+relic_archivist_plural:0 "Relic Curators"
+job_relic_archivist_plural:0 "Relic Curators"
+job_relic_archivist_effect_desc:0 "§Y$relic_archivist_plural$§! generate Empire wide £happiness£ §YHappiness§! and £minor_artifacts£ §Y$minor_artifacts$§! for every §YRelic§! in your possession."
+building_relic_archive_desc:0 "This massive structure houses endless corridors filled with ancient and mysterious relics that were gathered around in every part of the galaxy. Curatos preserve and study these ancient wonders for the benefit of the entire civilization."
+job_relic_archivist_add:0 "§Y$relic_archivist$§! Job"

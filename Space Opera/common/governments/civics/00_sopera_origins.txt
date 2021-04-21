@@ -45,3 +45,30 @@ origin_clone = {
 		base = 0
 	}	# Makes AI unable to get the origin?
 }
+
+origin_relic = {
+	is_origin = yes
+	icon = "gfx/interface/icons/dlc/ancient_relics.dds"
+	picture = GFX_evt_ancient_databank
+
+	playable = {
+		
+	}
+
+	possible = {
+	
+	}
+
+	description = civic_tooltip_relic
+
+	modifier = {
+		
+
+	}
+
+	advanced_start = no
+
+	random_weight = {
+		base = 10
+	}
+}

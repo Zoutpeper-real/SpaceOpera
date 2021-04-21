@@ -21,7 +21,7 @@ trait_reactive_chemistry = {
 	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting_lithoid" }
 	allowed_archetypes = { LITHOID }
 	modifier = {
-		leader_age = -50
+		leader_age = -25
 	}
 }
 
@@ -58,7 +58,7 @@ trait_dignified = {
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_ruler_produces_mult = 0.15
+		planet_jobs_ruler_produces_mult = 0.20
 	}
 }
 

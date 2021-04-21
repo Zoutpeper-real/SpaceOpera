@@ -21,3 +21,4 @@
  trait_crystalline_plating_desc:0 "§LThis species has formed a uniquely durable exoskeleton made from crystalline structures in its natural environment.§!"
  
  TRAIT_PIONEERING_EFFECT:4 "£job£ Colonists: Pop growth speed §G+20%§! and Habitability §G+10%§!"
+ #TRAIT_DIGNIFIED_EFFECT:4 "£job£ Ruler pop resource output §G+15%§! and §G+1§! Stability"

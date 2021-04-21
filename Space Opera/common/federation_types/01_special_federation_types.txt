@@ -1,0 +1,53 @@
+#First is set to default
+#
+#	#type_key
+#	test_type = {
+#		#on_create, run everytime the federation type has been set
+#		on_create = {}
+#		#potential
+#		potential = {}
+#		#allowed
+#		allow = {}
+#		#levels
+#		levels = {
+#			#test level key
+#			test_level = {
+#			#perks for level
+#				perks = {
+#					test_perk_1
+#					test_perk_2
+#				}
+#			}
+#		}
+#	}
+
+@xp_to_level_2 = 1200
+@xp_to_level_3 = 2400
+@xp_to_level_4 = 3600 # spopera 4800>3600
+@xp_to_level_5 = 4800 # spopera 9600>4800
+
+imperial_loyalists_federation = {
+	base_intel = 50
+	icon = "GFX_hegemony_federation"
+	potential = {
+		always = no
+	}
+	allow = {
+	}
+	levels = {
+		level_1 = { # Starting rank
+			experience = @xp_to_level_2 # Experience until next rank
+			perks = {
+				hegemony_federation_passive
+			}
+		}
+	}
+	on_create = {
+		set_federation_flag = special_federation
+		remove_federation_flag = enable_federation_cooldowns
+	}
+
+	ai_weight = {
+		base = 0
+	}
+}
