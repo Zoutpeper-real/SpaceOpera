@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_origin_nebu"
+		textureFile = "gfx/event_pictures/origins/origin_third_time_charm.dds"
+		alwaysTransparent = yes
+	}
+}

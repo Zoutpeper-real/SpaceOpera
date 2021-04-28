@@ -1,0 +1,167 @@
+namespace = sopera
+
+
+planet_event = {
+	id = sopera.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		This ={
+			planet = {
+				if = {
+					limit = {  
+						owner = { has_origin = origin_nebula }
+						OR = {
+							is_inside_nebula = yes	
+							solar_system = {
+								has_star_flag = nebu_start
+								}
+							}
+						NOT = {
+							has_modifier = nebula_planet
+							}		 
+						}
+					add_modifier = {
+						modifier = nebula_planet
+						days = -1
+						}
+					remove_modifier = nebula_planet_1
+					planet_event = {
+						id = sopera.3
+					}
+				}
+			}
+			
+		}
+	}
+	
+}
+
+planet_event = {
+	id = sopera.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		This = {
+			planet = {
+				if = {
+					limit = { 
+						AND = {
+							OR = {
+								is_inside_nebula = yes
+								solar_system = {
+									has_star_flag = nebu_start
+								 }
+							}
+							NOR = {
+								has_modifier = nebula_planet_1
+								has_modifier = nebula_planet
+	
+							}
+							
+						}
+						
+					}
+					add_modifier = { 
+						modifier = nebula_planet_1	
+						days = -1
+					}	
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = sopera.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		This = {
+			if = {
+				limit = { 
+					owner = { 
+						NOT = { has_origin = origin_nebula }
+					}
+					has_modifier = nebula_planet
+					
+				}
+			planet = { remove_modifier = nebula_planet }
+			planet_event = { 
+				id = sopera.2 }
+			}
+		}	
+	}
+}
+
+event = {
+	id = sopera.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_country = {
+			limit = { 
+				exists = capital_scope 
+				has_origin = origin_nebula
+			}
+			capital_scope = {
+				solar_system = {
+					every_system_planet = {
+						if = {
+							limit = { 
+								NOR = { 
+									has_modifier = nebula_planet
+									has_modifier = nebula_planet_1
+								}	
+							}
+							add_modifier = { 
+								modifier = nebula_planet
+								days = -1	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}			
+
+
+event = {
+	id = sopera.6
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_system = {
+			#limit = {
+			#	exists = planet
+			#}
+			every_system_planet = {
+				if = {
+					limit = { 
+						OR = { 
+							is_inside_nebula = yes
+							solar_system = {
+								has_star_flag = nebu_start
+						 		}
+						}
+						NOR = {
+							has_modifier = nebula_planet
+							has_modifier = nebula_planet_1
+						} 
+					}
+					add_modifier = {
+						modifier = nebula_planet_1
+						days = -1
+					}
+				}
+			}
+		}
+
+	}
+}

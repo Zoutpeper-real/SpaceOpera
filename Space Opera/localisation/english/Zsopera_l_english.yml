@@ -1,0 +1,17 @@
+﻿l_english:
+
+ ####################################
+ # zout
+ ####################################
+ nebula_planet: "Nebulean Planet"
+ #nebula_planet:0 "This planet is shrouded within a Nebula"
+ nebula_planet_desc: "A planet shrouded by a Nebula"
+ origin_nebula_desc: "This civilisation grew within the centre of a dangerous Nebula and has adapted accordingly"
+ origin_nebula: "Nebulean"
+ nebula_planet_1: "Nebulean Planet"
+ nebula_planet_1_desc: "A planet shrouded by a Nebula"
+ origin_tool_nebula: "A Civilisation grown under the protective shroud of a Nebula, they are masters at living within a Nebula. Leaving the Nebula's protection may prove difficult. Massively increased habitabillity on planets within a Nebula, but they suffer outside those."
+ origin_nebula: "Nebulean"
+ origin_nebula_desc: "A Civilisation grown under the protective shroud of a Nebula, they are masters at living within a Nebula. Leaving the Nebula's protection may prove difficult"
+ trait_pc_nebulean: "Nebulean"
+ trait_pc_nebulean_desc: "Adapted for life within Nebulea and have little other prefference"

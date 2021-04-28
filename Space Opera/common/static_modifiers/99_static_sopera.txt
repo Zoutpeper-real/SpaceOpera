@@ -1,0 +1,13 @@
+nebula_planet = {
+	pop_environment_tolerance = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/pm_wild_storms.dds"
+	icon_frame = 1
+	custom_tooltip = nebula_planet_1_desc
+	show_only_custom_tooltip = yes
+}
+
+nebula_planet_1 = {
+	pop_environment_tolerance = -0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_wild_storms.dds"
+	icon_frame = 1
+}
