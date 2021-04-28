@@ -12,7 +12,7 @@
  tr_diplomacy_the_federation_delayed:0 "We must build stable and lasting partnerships with our neighbors, based on trust and mutual respect. Together we are far stronger than we could ever hope to be alone."
 
  tr_diplomacy_entente_coordination:0 "Subversive Diplomacy"
- tr_diplomacy_entente_coordination_desc:0 "§YEncryption§! §G+1§!."
+ tr_diplomacy_entente_coordination_desc:0 "§YDecryption§! §G+1§!."
  tr_diplomacy_entente_coordination_delayed:0 "Perhaps the most important purpose of any successful diplomacy is having more intel than your enemies."
 
  tr_versatility_universal_compatibility_desc:1 "§Y$MOD_COUNTRY_TRUST_CAP_ADD$§! increases by §G+50§! and £opinion£ §YOpinion§! increased by §G+20§!, but only with fellow $auth_machine_intelligence$ empires.\n§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§!."
