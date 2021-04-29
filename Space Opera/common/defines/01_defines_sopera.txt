@@ -694,6 +694,47 @@
 		PLANET_COLONIZED_STRING				= "colonized"	# Identifies when a planet is newly colonized in telemetries
 		PLANET_ACQUIRED_STRING				= "acquired"	# Identifies when a planet was acquired in any way from another empire in telemetries
 	}
+
+	NPop = {
+		FORCED_SPECIES_GROWTH_PENALTY		= 0.5	# This amount of progress is lost on setting a forced species for growth
+		FORCED_SPECIES_ASSEMBLY_PENALTY		= 0.1	# This amount of progress is lost on setting a forced species for assembly
+
+		BASE_POP_GROWTH						= 3		# Base growth rate of pops
+		LOGISTIC_POP_GROWTH_R				= 0.125	# Logistic Pop Growth Constant r
+		LOGISTIC_POP_GROWTH_FLOOR			= 0.01	# Logistic Pop Growth won't lower growth to less than this percent.
+		LOGISTIC_POP_GROWTH_CEILING			= 2.00	# Logistic Pop Growth won't raise growth beyond this percent.
+		LOGISTIC_POP_GROWTH_MIN_POPS		= 5		# Treat small colonies as having this many pops to avoid the very bottom of the curve
+		LOGISTIC_POP_GROWTH_LOWER_THRESHOLD	= 0.5	# Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity
+		MAX_CARRYING_CAPACITY				= 500	# Logistic Carrying Capacity Cap (so modders have access to this value in case they make a planet with infinite districts or something like that)
+		MAX_NEW_COLONIES_SCALE				= 2 	# At this ratio of new to old colonies, no further scaling of migration
+		REQUIRED_POP_GROWTH					= 100	# Required growth to make a new pop
+		REQUIRED_POP_GROWTH_SCALE			= 0.25	# Required pop growth increased by this much for every pop in the empire >> Space_Opera
+
+		OVERCROWDING_NO_GROWTH_THRESHOLD	= 1.15	# At this amount of overcrowding (required housing / actual housing), growth stops entirely
+		OVERCROWDING_DECLINE_THRESHOLD		= 1.25	# At this amount of overcrowding (required housing / actual housing), pops start declining
+		OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH		= 5	# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in
+		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10 	# No more than this amount of pops can grow, assemble or decline in the same month
+
+		NEW_POP_SPECIES_RANDOMNESS			= 0.5	# The higher this is, the more random species selection of new pops will be
+		NEW_POP_SAME_SPECIES_WEIGHT			= 1.0	# The higher this is, the more new pops will be weighted by number of same or subspecies pops
+		NEW_POP_EXACT_SPECIES_WEIGHT		= 0.5	# The higher this is, the more new pops will be weighted by number of exact same species pops
+		NEW_POP_SLAVERY_WEIGHT				= 0.25	# The higher this is, the more new pops will tend to be balanced between enslaved and non-enslaved species
+		NEW_POP_SPECIES_DIV					= 0.05	# The higher this is, the more planets will tend to grow species that are underrepresented on the planet
+		NEW_POP_HABITABILITY_THRESHOLD		= 0.75	# If habitability is under this, apply exponentially increasing penalties to new pop weight
+		NEW_POP_LOW_HABITABILITY_PENALTY	= 2		# If habitability is under current threshold, apply increasing penalties to new pop weight
+		NEW_POP_HOMEWORLD_MULT				= 2		# Pops have increased weight for growing on their homeworld
+		NEW_POP_ASSEMBLY_TRAIT_MULT			= 2		# Extra weight per trait point for assembled pops
+		NEW_POP_GROWTH_MOD_MULT				= 0.33	# How much does species growth mod trait matter for new pop weight
+		NEW_POP_IMMIGRATION_MOD_MULT		= 1		# How much does species immigration growth mod trait matter for new pop weight (when there is immigration)
+
+		POP_ENSLAVE_MAX_RANK				= 1		# Pops above this stratum rank will not be enslaved from civics, etc
+
+		BASE_POP_ASSEMBLY					= 0		# Base assembly rate of pops
+		REQUIRED_POP_ASSEMBLY				= 100	# Required assembly to add a pop
+		REQUIRED_POP_ASSEMBLY_SCALE			= 0.25	# Required pop assembly increased by this much for every pop in the empire >> Space_Opera 
+	}
+
+
 	NEconomy = {
 		COLONY_MONTHLY_GROWTH				= 3		# How much the colonization pop grows every month.
 		COLONY_MAINTENANCE_COST 			= 8		# Base cost per month for a new colony.
