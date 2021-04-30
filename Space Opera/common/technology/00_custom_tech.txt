@@ -1,14 +1,15 @@
 # Form Federation
 tech_form_federations = {
-	cost = @tier3cost1
+	cost = @tier3cost2
 	area = society
 	tier = 3
 	category = { statecraft }
 	weight = @tier3weight1
-
+	is_rare = yes
+	
 	weight_modifier ={
 		modifier = {
-			factor = 0
+			factor = 0.1
 			years_passed < 50
 		}
 		
