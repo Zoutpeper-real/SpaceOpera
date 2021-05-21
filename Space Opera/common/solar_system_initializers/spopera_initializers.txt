@@ -11,7 +11,7 @@
 
 nebu_starting_init = {
 	name = "Hidden Jewel"
-	class = "rl_special_stars"
+	class = "rl_starting_stars"
 	asteroid_belt = {
 		type = icy_asteroid_belt
 		radius = 100
@@ -64,8 +64,8 @@ nebu_starting_init = {
 	# Home planet
 	planet = {
 		count = 1
+		class = ideal_planet_class
 		home_planet = yes
-		class = pc_alpine
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
 		size = { min = @homeworld_min_size max = @homeworld_max_size }
@@ -141,14 +141,17 @@ neighbor_t1_neb = {
 	}
 
 	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
-	}
-
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 25
+        orbit_angle = { min = 90 max = 270 }
+    }
+    planet = {
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 10
+        orbit_angle = 180
+    }
 	change_orbit = 45
 
 	planet = {
@@ -184,13 +187,19 @@ neighbor_t1_first_colony_neb = {
 	}
 
 	planet = {
-		count = 1
 		class = star
-		orbit_distance = 0
-		orbit_angle = 1
+		orbit_distance = 25
+		orbit_angle = { min = 90 max = 270 }
 		size = { min = 20 max = 30 }
 		has_ring = no
 	}
+
+	planet = {
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 10
+        orbit_angle = 180
+    }
 
 	change_orbit = 45
 
@@ -209,7 +218,7 @@ neighbor_t1_first_colony_neb = {
 	planet = {
 		count = 1
 		orbit_distance = 25
-		class = ideal_design_class
+		class = pc_continental
 		modifiers = none
 		anomaly = none
 		orbit_angle = { min = 90 max = 270 }
@@ -240,7 +249,7 @@ neighbor_t1_first_colony_neb = {
 
 # Neighbor Tier 2
 neighbor_t2_neb = {
-	class = "sc_binary_1"
+	class = "rl_special_stars"
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 70
@@ -290,7 +299,7 @@ neighbor_t2_neb = {
 
 # Neighbor Tier 2 Second Colony
 neighbor_t2_second_colony_neb = {
-	class = "rl_special_stars"
+	class = "rl_dwarf_stars"
 	flags = { neighbor_t2_second_colony nebu_start }
 
 	init_effect = {
@@ -318,7 +327,7 @@ neighbor_t2_second_colony_neb = {
 	planet = {
 		count = 1
 		orbit_distance = 25
-		class = ideal_design_class
+		class = pc_desert
 		modifiers = none
 		anomaly = none
 		orbit_angle = { min = 90 max = 270 }
@@ -328,6 +337,7 @@ neighbor_t2_second_colony_neb = {
 
 		init_effect = {
 			set_planet_flag = prescripted_ideal		# used by code, do not remove
+			
 		}
 
 		moon = {

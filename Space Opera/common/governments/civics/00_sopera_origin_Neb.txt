@@ -3,7 +3,7 @@ origin_nebula = {
 	icon = "gfx/interface/icons/origins/origins_nebu.dds"
 	picture = GFX_origin_nebu
 	starting_colony = pc_alpine
-	habitability_preference = pc_gaia
+	habitability_preference = pc_nebulean
 	max_once_global = yes
 	
 	potential = {
