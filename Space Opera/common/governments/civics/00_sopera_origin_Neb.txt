@@ -18,7 +18,7 @@ origin_nebula = {
 
 	
 	traits = { 
-		trait = trait_pc_nebulean }
+		trait = trait_pc_nebulean_preference }
 	
 	advanced_start = no
 	preferred_planet_class_neighbor = no
