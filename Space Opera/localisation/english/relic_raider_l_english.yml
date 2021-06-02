@@ -23,3 +23,4 @@ relic_wars.4.a:0 "At least we survived."
 ############## MODIFIERS ###################
 relic_raider:0 "Relic Raider"
 relic_raider_desc:0 "We enjoy the hatred from our frail enemies."
+mod_job_relic_archivist_add:0 "$relic_archivist$ Jobs"

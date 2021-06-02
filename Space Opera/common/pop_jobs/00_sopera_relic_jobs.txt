@@ -17,7 +17,7 @@ relic_archivist = {
 	}
 
 	resources = {
-		category = specialist
+		category = pop_category_specialists
 		produces = {
 			minor_artifacts = 0.1
 		}

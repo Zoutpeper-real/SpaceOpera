@@ -3,12 +3,15 @@ tr_diplomacy_finish = {
 		ascension_perks_add = 1
 		country_society_tech_research_speed = 0.05 #Space Opera
 		envoys_add = 1 #Space Opera
-		add_research_option = tech_form_federations #Space Opera
-		add_tech_progress = {
+	}
+	on_enabled = {
+			add_research_option = tech_form_federations #Space Opera
+			add_tech_progress = {
 			tech = tech_form_federations
 			progress = 0.12
+			}
 		}
-	}
+	
 
 	tradition_swap = {
 		name = tr_adaptability_finish

@@ -12,10 +12,8 @@ clone = {
 	}
 
 	possible = {
-		AND = {
 			specialist_job_check_trigger = yes
 			has_trait = trait_clone
-		}
 	}
 
 	triggered_planet_modifier = {
