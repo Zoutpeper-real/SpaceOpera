@@ -42,7 +42,7 @@ action_invite_to_federation = {
 	}
 
 	possible = {
-		#makes federations a tech unlock instead of tradition
+		#makes federations a tech unlock instead of tradition Space_opera
 		custom_tooltip = {
 			fail_text = "requires_technology_the_federation"
 			OR = {
@@ -135,4 +135,26 @@ action_invite_to_federation = {
 			}
 		}
 	}
+}
+
+# Break an existing commercial pact, harms relations and sets a 10 year truce.
+action_break_commercial_pact = {
+	icon = "GFX_diplomacy_status_commercial_pact"
+	auto_accepted = yes
+	should_notify_all_communications = yes
+	should_show_auto_accept_message_recipient = yes
+	requires_actor_independence = no
+	requires_recipient_independence = no
+	action_type = negative
+}
+
+# Break an existing commercial pact, harms relations and sets a 10 year truce.
+action_break_research_agreement = {
+	icon = "GFX_diplomacy_status_research_agreement"
+	auto_accepted = yes
+	should_notify_all_communications = yes
+	should_show_auto_accept_message_recipient = yes
+	requires_actor_independence = no
+	requires_recipient_independence = no
+	action_type = negative
 }
