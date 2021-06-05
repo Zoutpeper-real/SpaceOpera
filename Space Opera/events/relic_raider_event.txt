@@ -1,0 +1,71 @@
+namespace = relic_raider
+
+#country_event = {
+#	id = relic_raider.0000
+#	title = "test add relic"
+#	desc = 
+#
+#	picture = GFX_evt_alien_propaganda
+#	show_sound = relic_activation_ether_drake_trophy
+#
+#	is_triggered_only = yes
+#	immediate = {
+#
+#	}
+#	option = {
+#		name = EXCELLENT
+#		
+#
+#	}
+#	after = { 
+#		owner = { 
+#			add_relic = r_zro_crystal
+#			add_relic = r_rubricator
+#			add_relic = r_reality_perforator
+#			add_relic = r_cryo_core	
+#			add_relic = r_pox_sample
+#			add_relic = r_war_forge 
+#		}
+#	}
+#}
+
+
+## Took one relic in war
+country_event = {
+	id = relic_raider.1
+	title = relic_wars.1.name
+	desc = relic_wars.1.desc
+
+	picture = GFX_evt_alien_propaganda
+	show_sound = relic_activation_ether_drake_trophy
+
+	is_triggered_only = yes
+
+	option = {
+		name = relic_wars.1.a
+	}
+}
+
+## Lost one relic in war
+country_event = {
+	id = relic_raider.2
+	title = relic_wars.2.name
+	desc = relic_wars.2.desc
+
+	picture = GFX_evt_alien_segregation
+	show_sound = event_life_support_fail
+
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+	
+	option = {
+		name = relic_wars.2.a
+		###tooltip = { add_modifier = { modifier = humiliated days = 3600 } }
+	}
+}
+
+
+ 

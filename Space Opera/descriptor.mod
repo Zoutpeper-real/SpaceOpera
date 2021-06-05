@@ -1,4 +1,4 @@
-version="0.1"
+version="0.2"
 tags={
 	"Balance"
 	"Diplomacy"
@@ -10,5 +10,5 @@ tags={
 }
 name="Space Opera: A Multiplayer Experience"
 picture="thumbnail.png"
-supported_version="2.8.1"
+supported_version="3.0.3"
 remote_file_id="2417043842"

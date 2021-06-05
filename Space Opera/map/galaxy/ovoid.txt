@@ -1,0 +1,20 @@
+core_radius_perc = 0.20				# Core radius is 30% of the galaxy radius
+num_stars_core_perc = 0				# Number of stars in core
+stars_min_dist = 5.0				# Min distance between stars
+
+countries = {
+	ideal_sq_dist_between = 5625	# x*x Ideal square distance between countries
+	min_sq_dist_between = 4225		# x*x Min square distance between countries
+}
+
+arms = {
+	tightness_winding = 0.9			# Tightness of winding
+	width = 60.0					# Arm width in degrees
+	fuzz = 1.0						# Maximum outliers distance from arms
+	seperation = 360.0				# Separation (in degrees) between each arm	
+}
+
+fallen_empires = {
+	ideal_sq_dist_between = 15625  	# 175*175 Ideal square distance between countries
+	min_sq_dist_between = 5625		# 75*75 Min square distance between countries		
+}

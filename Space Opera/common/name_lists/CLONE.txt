@@ -1,0 +1,297 @@
+﻿### Charles 
+### Created by Vathorst
+
+CLONE = {
+	category = "Humanoid"
+	randomized = no
+	alias = "Clone"
+
+	ship_names = {
+		
+		corvette = {
+			Aardvark Accentor Adder Albatross Alligator Anaconda Antelope Armadillo Asp Badger Bass Beagle Bloodhound Buffalo Bulldog Buzzard Camel Cheetah Cobra Coyote Dingo Dolphin Dragonfly Dromedary Eagle Elephant Falcon Ferret Firefly Fox Gazelle Glowworm "Grey Wolf" Greyhound Haddock Hawk Jackal Jackdaw Jaguar Kangaroo Kestrel "King Cobra" "King Fish" Ladybird Leopard Lion Lizard Lynx Mongoose Mosquito Narwhal Nighthawk Ocelot Orca Osprey Panther Peacock Pelican Penguin Petrel Platypus Polecat Porcupine Puma Python Rattlesnake Raven Salamander Sardine Scorpion Shark Shrike Skylark Sparrow Spider Starfish Stingray Barracuda Stork Sturgeon Swordfish Tapir Tiger "Tiger Shark" Vulture Walrus Wolverine Apache Aztec Cossack Dervish Druid Highlander Janissary Matador Papillon Parthian Patrician Saracen Sphinx Sultan Tomahawk Viking Zulu Abhay Akshay Akula Soyuz Harrier "Tomoe Gozen" Garuda Yangwei Datong Haifeng Hailong Yongcheng Yinghao Taiyang Chaoyang Qiuxing Guangxing Zhengsheng Taizhao Meihong Wulong Jiangkun Acorn Musketeer Pharaoh Mongol Rickenbacker "John Paul Jones" Doblestnyi Steregushchiy Soobrazitelny "Rodger Young" "Crazy Horse" Richthofen Boyington Fonck Mannock Bishop Kazakov Coppens Brumowski Baracca Hartmann Juutilainen Nishizawa Sakai Shestakov Kozhedub Cantacuzino "Van Lierde" Bong Thach Clostermann Mitralexis Shinohara Iwamoto Mölders Skalski MacLachlan Caldwell Litvyak Yeager McCampbell O'Hare Sealion Balao Gato Doolittle Novikov Uhlan Cataphract Soyokaze Orff Vandal Chameleon Grizzly Gurkha Hoplite Kodiak Piranha Wildcat Hellcat Bearcat Tomcat Kingfisher Cougar Mohawk Blackhawk "Shooting Star" Avocet Sparrowhawk Skua Firecrest Fulmar Arrowhead Condor Goshawk Nicator Samurai Smilodon Whippet Cormorant Ranvir Rajput Rana Toreador McAuliffe Cardinal Nightingale Adler Seahorse Ronin Iguana Redeemer "William Tell" "Sitting Bull" Hiawatha "John Henry" "Paul Bunyan" Cangjie "Dakshin Rai" "Guru Baaje" Madoc Rostam Esfandiar "Juan Valdivia" Yinxi Yennenga "Running Eagle" "Hua Mulan" Yuenü Boudica Ethelfleda Gwenllian Gwendolen Cordelia Andraste Scathach Muirisc Morrigan Badb Macha Teuta "Jeanne Hachette" Atalanta Hippolyta Penthesilea Clorinda Tancred Brunhild Agustina Gordafarid Semiramis Malalai "Shaka Zulu" Lafayette "Reuben James" Nostromo Sulaco Costaguana Ribiera Shashka Sica Jian Dao Zhanmadao Makhaira Falcata Kopis Rhomphaia Kilij Shamshir Kaskara Flyssa Takoba Yatagan Urumi Liuyedao Tachi Khanda Wodao Changdao Yanmaodao Miaodao Chokuto Tsurugi Odachi Wakizashi Uchigatana Shikomizue Firangi Talwar Pata Kastane Macana Khopesh Acinaces Macuahuitl Belawa Nimcha Shotel Krabi Parang Klewang Surik Niabor Mandau Kampilan Gari Panabas Olds Kearsarge Dristigheten
+		}
+		
+		destroyer = {
+			Amsterdam Austin Athens Atlanta Baghdad Baltimore Bangkok Barcelona Beijing Belfast Berlin Bombay Boston Hyderabad Budapest "Buenos Aires" Cairo Calcutta "Cape Town" Chicago Copenhagen Damascus "Dar es Salaam" Detroit Dubai Dublin Edinburgh Gibraltar Glasgow Guangzhou Hanoi Havana Helsinki "Hong Kong" Houston Istanbul Jakarta Jerusalem Johannesburg Kiev London "Los Angeles" Madrid Manila Minsk Moscow Mumbai "New York" "New Orleans" Novgorod Osaka Oslo Paris Prague "Rio de Janeiro" Rome Rotterdam "San Francisco" "Sao Paulo" Sarajevo Seattle Seoul Sevastopol Shanghai Singapore "St. Louis" Stockholm Tokyo Toronto Vancouver Vienna Vladivostok Warsaw Sydney Brisbane "Mexico City" München Nairobi Smolensk Casablanca Venice Mogadishu Montreal Birmingham Liverpool Manchester Kabul Kyoto Volgograd "St. Petersburg" Frankfurt Belgrade Marseille Brussels Tripoli Tehran Quebec Florence Exeter Dallas Denver Lagos Melbourne Calgary Ottawa Algiers Brazzaville Santiago Montevideo Bogota Chengdu Hangzhou Shaoxing Yokohama Pittsburgh Philadelphia Miami Lisbon Hamburg Bremen Phoenix Indianapolis Minneapolis Milan Surabaya "Kuala Lumpur" "Abu Dhabi" Ankara Beirut Kathmandu Tapei Islamabad Karachi Zürich Delhi Bangalore Düsseldorf "Tel Aviv" Lima Luxembourg Bucharest Geneva Gothenburg Lyon Bratislava Tunis Riyadh Riga Valencia Krakow Vilnius Tallinn Edmonton Tijuana Trondheim Dhaka Shenzhen Suzhou Kinshasa Lahore Dongguan Chongqing Chennai Changsha Wuhan Tianjin Faisalabad Foshan Zunyi Ahmedabad Shantou Rangoon Abidjan Alexandria Xi'an Surat Harbin Giza Izmir Zhengzhou Xiamen Quanzhou Busan Rawalpindi Guayaquil Jeddah Durban Hefei Pyongyang Peshawar Ekurhuleni Zhongshan Multan Pune "Addis Ababa" Jaipur Lucknow Wenzhou "Quezon City" Salvador Luanda Kaohsiung Taichung Gujranwala Quito Chittagong Bandung Brasilia Daegu Nagpur Nagoya "Phnom Penh" Kochi Medan Perth Sapporo "Davao City" Caloocan Kobe Guadalajara Auckland Fukuoka Kawasaki Adelaide Ulsan Tbilisi Fez Yerevan Köln "San Antonio" "San Diego" "San Jose" Jacksonville "Fort Worth" "Charlotte" "El Paso" Nashville Portland "Oklahoma City" "Las Vegas" Louisville Milwaukee Albuquerque Tucson Fresno Sacramento "Kansas City" Omaha Oakland Tulsa Wichita Arlington Cleveland Tampa Bakersfield Honolulu Anchorage Cincinnati Orlando Irvine Reno Richmond Spokane "Salt Lake City" Tallahassee Huntsville Knoxville Springfield Savannah Hartford Fargo Winnipeg Hamilton Mississauga Halifax Bristol Sheffield Leeds Leicester Bradford Cardiff Coventry Nottingham Newcastle Wolverhampton Southampton Portsmouth Brighton Aberdeen Bolton Norwich Swansea Oxford York Blackpool Cambridge Ipswich Stuttgart Dortmund Essen Dresden Hannover Nürnberg Duisburg Bonn Münster Karlsruhe Mannheim Augsburg Freiburg Aachen Lübeck Mainz Rostock Potsdam Toulouse Nice Nantes Strasbourg Montpellier Bordeaux Lille Rennes Reims "Le Havre" Toulon Grenoble Dijon Brest Metz Novosibirsk Yekaterinburg Samara Omsk Kazan Chelyabinsk Rostov Ufa Perm Krasnoyarsk Voronezh Saratov Krasnodar Izhevsk Ulyanovsk Yaroslavl Irkutsk Khabarovsk Orenburg Ryazan Astrakhan Lipetsk Tula Kirov Bryansk Ivanovo Stavropol Tver Arkhangelsk Vladimir Murmansk Grozny Petrozavodsk Pskov Antwerp Utrecht "The Hague" Turin Palermo Genoa Seville Granada Aleppo "Kuwait City" Amman Mashhad Isfahan Gaza Sana'a Mosul Khartoum Accra Kano Ibadan Dakar Pretoria Benghazi Rabat Freetown Djibouti Monrovia "Port Elizabeth" N'Djamena Lodz Canberra Baku Sofia Zagreb Astana Nouakchott "Ulan Bator" Abuja "Port Moresby" "Banja Luka" Douala Nicosia "San Salvador" Thessaloniki Guatemala Port-au-Prince Georgetown Reykjavík Basra Cork Kingston Mombasa Ecatepec Windhoek Wellington Hebron "Panama City" Porto Ljubljana Malmö Bern Donetsk Harare Aarhus Liege
+		}
+		
+		cruiser = {
+			Bolivar Brusilov Churchill Clausewitz Garibaldi "Gustavus Adolphus" Hammurabi "Julius Caesar" Justinian Lincoln Patton Rommel "Sun Tzu" Liberator Zhukov "Alexander Nevsky" Pyrrhus "Yi Sun-sin" Heihachiro "Khalid ibn al-Walid" Vasa Hindenburg "De Gaulle" Subutai Nagato Scharnhorst Clemenceau Richelieu "Jean Bart" Sparviero Affondatore Tromp "De Ruyter" Esperanza Pelayo Velasco Juneau Sherwood Alamo Bannockburn Borodino Breitenfeld Cannae "El Alamein" Gaugamela Kadesh Kursk Masada Normandy Salamis Sedan Tannenberg Ticonderoga Thermopylae Marengo Leipzig Shiloh Königgrätz Ypres Somme Suomussalmi Kharkov Guadalcanal "Leyte Gulf" "Dien Bien Phu" Thymbra Manassas Blenheim Adelphi Angel Borealis Bounty Emancipator "Morning Star" "Shi Lang" Vikramaditya Viraat Vikrant Vishal Kongo Oriskany "Bunker Hill" Farragut "Kitty Hawk" "Royal Oak" Thunderbolt Nimitz Eisenhower Roland "Tran Hung Dao" Themistocles Cunaxa Uhuru Ramses Vauban Harpagos Anzio Caen Carentan Bastogne Arnhem Temeraire Vesuvius Etna "St. Helens" "Olympus Mons" Alcibiades Patrocles Santander Vega Rigel Sirius Canopus Arcturus Capella Procyon Altair Betelgeuse Antares Achernar Aldebaran Pollux Deneb Regulus Proxima "Rigil Kentaurus" Spica Polaris Bellatrix Capricorn Syracuse Metaurus Chalons Tours Hastings Orléans Valmy Mukden Narvik Narva Poltava "Lake Peipus" Malta Antietam "Baton Rouge" Beauport Abukir Lund Issus Changping "Teutoburg Forest" "Watling Street" Yarmouk Salamanca Berezina Fredericksburg Chickamauga Caporetto "Khalkhin Gol" Gazala "Monte Cassino" Saipan Breslau Plataea Hydaspes Sentinum Heraclea Kalinga Magnesia Adrianople Ravenna Lützen Cambrai Marne Chancellorsville "Philippine Sea" "Savo Island" "Cape Esperance" Taranto "Cape Matapan" "Java Sea" Gallipoli "De Valette" Suleiman MacArthur Roosevelt Victoria Nebuchadnezzar Pachacuti "Catherine the Great" "Frederick the Great" Ashoka "Qin Shi Huang" Tamerlane Marshall "Joan of Arc" "Genghis Khan" Atatürk "William the Conqueror" "Bonhomme Richard" "Iron Duke"
+		}
+		
+		battleship = {
+			Ulysses Xenophon Xerxes Nelson Icarus Atlas Apollo Ajax Bellerophon Agrippa Alexander Belisarius Hannibal Washington Saladin Bismarck Yamato Actium Agincourt Austerlitz Gettysburg Jutland Trafalgar Tsushima "Valley Forge" Verdun Waterloo Granicus Pharsalus Akira Charlemagne "Black Prince" Hood Potemkin Musashi Warspite Victory Courage Dauntless Endeavor Excelsior Indefatigable Chivalrous Valiant Monitor Bulwark Defender Endurance Vigilant Resolute Fortitude Yamamoto Lexington Midway Saratoga Yorktown "Coral Sea" Hermes Wasp Hornet "Ark Royal" Essex Akagi Kaga Illustrious Intrepid Constellation Constitution Ranger Andromeda Aquila Century Concord Defiant Galaxy Odyssey Orion Providence Reliant Freedom Solaris Independence Lionheart Unicorn Napoleon "Royal Sovereign" Marathon Imperieuse
+		}
+
+		titan = {
+			Enterprise Invincible Pegasus Hercules Excalibur Formidable
+		}
+
+		colossus = {
+			"Sol Invictus" Adjudicator Overlord Guardian Kingmaker
+		}
+
+		juggernaut = {
+			Ararat "Axis Mundi" "Great Reformer" Kunlun Tectonic
+		}
+
+		constructor = {
+			Pacific Atlantic Adriatic Amazon Danube India Africa Volga Colorado Ganges Jordan Mekong "Rio Grande" Rubicon Yangtze Mississippi Yukon Indus
+			Rhine Tigris Sahara Bengal Merrimack Potomac Susquehanna Orinoco Shenandoah
+		}
+		
+		colonizer = {
+			Mayflower Abundance Bountiful Felicity Hope Opportunity Serenity Unity Destiny Britannia Byzantium Caledonia "El Dorado" Knossos Memphis 
+			Olympus Persepolis "Sierra de la Plata" Sparta Valhalla "Crystal Palace" Alaska Angola Australia Brazil Canada Congo Guinea India Indonesia 
+			Jamaica Macau Mozambique Philippines Somalia "Sri Lanka" Taiwan
+		}
+
+		sponsored_colonizer = { # needed when there are no generic names
+			Mayflower Abundance Bountiful Felicity Hope Opportunity Serenity Unity Destiny Britannia Byzantium Caledonia "El Dorado" Knossos Memphis 
+			Olympus Persepolis "Sierra de la Plata" Sparta Valhalla "Crystal Palace" Alaska Angola Australia Brazil Canada Congo Guinea India Indonesia 
+			Jamaica Macau Mozambique Philippines Somalia "Sri Lanka" Taiwan
+		}
+		
+		science = {
+			Aldrin Armstrong Columbus Copernicus Cortez Drake Hubble Goddard Galileo Einstein Gagarin Tereshkova "Zheng He" "Leif Ericson" Magellan "James Cook" "Marco Polo" Newton Tesla "Von Braun" "Walter Raleigh" Asimov Clarke Sagan "Ibn Battuta" Kepler Ptolemy Pytheas Azophi Discovery Voyager Tradewind Scout Pioneer Explorer Sojourner "Santa Maria" Hawking Earhart Nobel Kelvin Fahrenheit Equinox Lagrange Tsiolkovsky Darwin Grissom Archimedes
+		}
+		
+		transport = {
+			Cowpens "Belleau Wood" Bataan Monterey Veracruz Tarawa "Iwo Jima" Okinawa Inchon "Goose Green" Peleliu Guam Bougainville
+		}
+
+		military_station_small = {
+			Citadel Albacore Gateway Vincent Babylon Caernavon Acre Pembroke Acheron Spithead Halifax Victoria Chatham Anchorage "Scapa Flow" "Hampton Roads" Brooklyn Norfolk Newport Guam Pensacola Vesuvius McKinley Everest Kilimanjaro Aconcagua Elbrus "St. Helens" Fuji Olympus Sinai Ambrose Bermuda Farpoint "Blue Star" "Olympus Mons" Tharsis Syrtis Blackham Fletcher Perry Butakov Morris Moorsom Hart Hargood Spruance Tanaka Halsey Turner Doria Tirpitz Cunningham Jellicoe Hipper Beatty Potemkin Durham Codrington Milne Laforey Tyler Hawke Yonai Pound King Crutchley Mountbatten Kountouriotis Kuznetsov Essen Kornilov Suffren Treville Villeneuve Grasse Byng Lezo
+		}
+
+		ion_cannon = {
+			Bombard Ballista Catapult Harpoon Polybolos Culverin
+		}
+	}
+
+	fleet_names = {
+		sequential_name = "%O% Fleet"
+	}
+	
+	army_names = {
+
+		machine_defense = {
+			sequential_name = "%O% Planetary Guard"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Expeditionary Force"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Expeditionary Force"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Expeditionary Force"
+		}
+	
+		defense_army = {
+			sequential_name = "%O% Planetary Guard"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Expeditionary Force"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Indentured Rifles"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Army"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Dread Commando"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Hunter-Killer Group"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Ground Defense Matrix"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Psi Commando"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Bio-Warfare Division"
+		}
+		
+		gene_warrior_army = {
+			random_names = {
+				"SARC-A 'Gladiators'" "SARC-B 'Widowmakers'" "SARC-C 'Immortals'" "SARC-D 'Berserkers'" "SARC-E 'Assassins'"
+				"SARC-F 'Reapers'" "SARC-G 'Nighthawks'" "SARC-H 'Desperados'" "SARC-I 'Grey Knights'" "SARC-J 'Roughnecks'" 
+			}
+			sequential_name = "%O% Bio-Engineered Squadron"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Garrison Force"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Mechanized Garrison"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"New Jerusalem" Anchor Dis Avalon Bounty Hope Olympia Serendipity Spring Thinis Salaam Xianyang Concord
+				Theia Tuscany "New Roanoke" Wenzhou "New Jamestown" "New Troy" Delgovicia "Wang Tong" Al-Jissa Al-Mada'in 
+				Al-Nuqayrah Al-Karak Al-Matabbah "Las Veredas" "San Lucas" "San Fernando" "San Cristóbal" "Nueva Sonora" 
+				"Puerto González" Nozomi Akatsuki "Nueva Cádiz" "La Isabela" "New Coventry" "St. Yegorov" "St. Pomeroy"
+				"Port Karakosov"
+			}
+		}
+		
+		pc_desert = {
+			names = {
+				"Nova Arabia" Sahara Gobi Kalahari Mojave Patagonia Syria Chihuahua Sand "Kara Kum" Colorado Sonora 
+				"Kyzyl Kum" Taklamakan Thar Gibson Namib Lut Kavir Dune Kali Muspelheim Vulcan Baal Carthage 
+				Ordos Khara Lop Maranjab Negev Sinai Atacama Simpson
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				Lebanon Tyre Antioch Jaxartes Oxus Turan Accona Bardenas Larzac Oltenia Tabernas Atacama Tanami 
+				Rangipo "New Mars" Canaan
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				Amazonia Congo Ecuador Rain Storm Monsoon Bengal "New Africa" Kishkindha Zanzibar Kipling
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				Albion Amor Dawn Horizon Asgard "Terra Nova" Kongzi Zoroaster "Tian Yi" 
+				"Wu Ding" Zheng "Gao Zu" Tokugawa Oda Toyotomi Rama Vishnu Soma Pangea
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				Eden Elysium Cornucopia Utopia Shambhala Xanadu Shangri-La
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				Atlantis Oceania Pacifica Atlantica Euxina Hyrcania Rubrica Erythraea Baltica R'lyeh Dagon Kraken Aegea 
+				Adriatica Tyrrhenia Mediterranea Mare "Port Rabcewicz" Ningbo
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				Iceland Canada Kola Scandza Utgard Rus Blizzard Taiyuan
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				Thule Arctica Greenland Alaska Baffin Siberia Niflheim Hyperborea
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+		
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			first_names_male = {
+				Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles "Sir Charles" "Sir Benjamin" "Sir James" "Sir Walter" "Sir Montgomery"
+			}
+			first_names_female = {
+				Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles Charles "Sir Charles" "Sir Benjamin" "Sir James" "Sir Walter" "Sir Montgomery"
+			}
+			second_names = {
+				Smith Jones Williams Taylor Brown Davies Evans Wilson Johnson Robinson Wright Thompson Evans Walker White Roberts Green Hall
+				Wood Jackson Clark Lewis Mason Mitchell Cox Campbell Stewart Quinn Murphy Hamilton Moore Murray McLaughlin Martin O'Neill
+				Anderson Scott MacDonald Reid Ross Watson Patterson Morrison Sanders Harris Hughes Driscoll Price Jenkins Morgan Moss
+				Sinclair Simpson Zimmerman Young York Youngfellow Winters Worley Woodard Whitley Wheeler Wentworth West Weaver Webb Welsh
+				Sparks Spencer Stafford Stanley Steel Sterling Stevens Stone Stewart Sullivan Swanson Sweeney Swift Sykes Terrell Thornton
+				Tipton Turner Tyler Underwood Vincent Voight Wade Washington Watts O'Connor O'Donnell O'Hara Owens Page Palmer Parker
+				Perry Parson Paxton Payne Perkins Peters Pershing Phillips Pitt Potter Reynolds Reaves Reese Richardson Rivers Robbins
+				Robertson Roswell Ryan Salinger Samuels Sandler Savage Saxton Schneider Scowley Sedgwick Shannon Flint Sibbett Silverman
+				Silverstone Smart Snow Kruger Landau Lawrence Lawson Lee Leonard Little Lowell Michaels McGillis McKinnon McSwain McCoy
+				McCarthy McCormick McCreary Marshall Lynch Miller Montgomery Morris Nash Newman Nichols North Masterson Mayfield McCall
+				Hansen Harrington Hart Hendricks Holmes Higgins Hoffman Hood Hutchinson Hyland Knight Kirk King Kenway Kennedy Kelly
+				Kane Nathanson Jennings Jacobs Jefferies Irwin Gilbert Glass Glover Goldberg Goldstein Goodman Goodwin Graham Grant Graves
+				Gray Greenberg Gorney Griffin Halley Hunter Holloway Hoover Hutchins Hill Hines Holden Harvey Handler Cohen Collins Conrad
+				Conroy Cook Conley Compton Cody Crouch Crosby Curtis Fields Farrell Felton Fisher Fleming Forrest Foster Fox Freeman
+				Futterman Gardner Garrett Gates Garfield Gabriel Daniels Darling Easterbrook Edwards Edelstein Elliott Emerson Ericson
+				Duncan Dickinson Alexander Allen Austin Bauer Bancroft Baker Bailey Banks Barks Bassett Brewster Brooks Breckenridge Booth
+				Bloom Sherman Sheridan Billingsley Billings Bergman Bates Becker Bell Bellflower Bains Bean Cartwright Carpenter Buckland
+				Burness Burnett Bush Butler French England Carroll Carter Cavanaugh Chaffin Chase Channing Chapman Arnold Fry Milton
+				Sharp Durston Howell Mead Poole Ashton Brockbank Cooper Cursham Dixon Baxter Drake Garland Wells Hargreaves Houghton
+				Haygarth Hurst Kingsford Lindsay Rawson Walden Walters Whitfield Bennett Cross Buxton Dyson McMillan Russell Scott Beauclerk
+				Ward Howard Lloyd Tanner Nicholas Matthews Ellis Whyting Whittaker Barton Hawkins Garrovick Spector Reeves Vernon McNiven
+				Rowley Sandford Fawcett Lockhart Lang Oliphant Wilkins Balfour Appleby Buchanan Yardley Shaw Stokes Allenby Cockburn Mundy
+				Franklin Armstrong Chamberlain Powell Abbott Blair "Van Hoof" "Van Rijn" Burnside Schofield Farnsworth Ford Warner Porter
+				Barksdale Polk Gibbons Archer Pickett Houston Whitfield Pearson Lucas Horner Bainbridge Rollins Casey Cochrane Merchant
+				Bowden Douglas Muldoon Wickham Milligan Bradley Findley Spooner Harper Shepard Kingston Knox Colbeck Shields Burns Gibson
+				Burton Crutchley Gilligan Bridges Richter Fowler Novak Longfield Seabrook Hazelton Kingsley Doggart Wilcox Hudson Hooks Hicks
+				Cameron Hammond Knotts Jefferson Coffey Adams Babcock Baldwin Bannister Purcell Baumgartner Birch Blackwood Blake Bolander
+				Bolton Brock Brannigan Burke Weyland Burrows Cairns Carlyle Carson Charlesworth Church Clancy Cullen Dufresne Bixby Featherstone
+				Ferguson Foley Funk Gorman Haddock Grisdale Grimes Hoffmeyer Holt Ingram Kaiser Kearns Keeler Kellerman Kinnear Kurtz Kyle
+				Laidlaw Lankshear Lessard Lowe MacKenzie MacNevin MacInnis Madigan Maloney Marsh McAllister McBain Myers Nicholson Olsen
+				O'Malley Peacock Peckham Murdoch Prefontaine Pratt Popovic Pritchard Quackenbush Penebscott Pfaffenbach Ramsey Quincey
+				Reilly Reinhart Renaud Rolston Shoebottom Skinner Sloan Snell Snider Sorensen Spiller Spurgeon Stanfield Stackhouse Stiles
+				Sutherland Sutton Taggart Townsend Traynor Stark Strudwick MacArthur Barnes Atkins Ballard Biggs Baird Fredericks Humphry
+				Colt Dillard Cunningham DeStefano Finks Fletcher Galloway Kirby Sutter Preston Tucker "Smith Jr." "Williams Jr." "Evans Jr."
+				"Walker Jr." "Taylor Jr." "Scott Jr." "Meriweather II" "Barksdale III" "Leadbetter IV" "Pemberton II" "Trapier III" Kowalski
+				Rabinowitz Feldman Katz Roykirk Decker
+			}
+			regnal_first_names_male = {
+				"Charles Alexander" "Charles Vladimir" "Charles Boris" "Charles Tiberius" "Charles Theobald" "Charles Valerian" "Charles Maximus" "Charles Lucius"
+			}
+			regnal_first_names_female = {
+				"Charles Alexander" "Charles Vladimir" "Charles Boris" "Charles Tiberius" "Charles Theobald" "Charles Valerian" "Charles Maximus" "Charles Lucius"
+			}
+			regnal_second_names = {
+				Habsburg Romanov Windsor Mountbatten Salazar Nelson
+			}
+		}
+	}
+}

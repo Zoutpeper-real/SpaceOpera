@@ -1,0 +1,13 @@
+# All global modifiers are here.  They are applied from certain game-features.
+#
+# Effects are fully scriptable here.
+
+# The names can NOT be removed or changed since the code references them
+
+# 
+relic_raider ={
+	##diplomacy_upkeep_mult = 1
+	icon = "gfx\interface\icons\modifiers\mod_country_trust_growth.dds"
+	icon_frame = 2
+	pop_citizen_happiness = 0.0
+}

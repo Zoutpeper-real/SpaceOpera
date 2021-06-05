@@ -10,6 +10,6 @@ tags={
 }
 name="Space Opera: A Multiplayer Experience"
 picture="thumbnail.png"
-supported_version="2.8.1"
+supported_version="3.0.2"
 path="F:/Paradox Interactive/Stellaris/mod/Space Opera"
 remote_file_id="2417043842"

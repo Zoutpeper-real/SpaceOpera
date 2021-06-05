@@ -1,0 +1,27 @@
+﻿l_english:
+ requires_technology_the_federation:2 "$TRIGGER_FAIL$§RRequires the §GFederations§! technology.§!"
+ 
+ tech_form_federations:0 "Federations"
+ tech_form_federations_desc:0 "We must build stable and lasting partnerships with our neighbors, based on trust and mutual respect. Together we are far stronger than we could ever hope to be alone.\n$TECH_UNLOCK_DIPLOMATIC_ACTION_CREATE_FEDERATION_TITLE$\n§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§!."
+
+ tech_entente_coordination:0 "Entente Coordination"
+ tech_entente_coordination_desc:0 "Perhaps the most important purpose of any successful interstellar federation is the mutual defense of its members. We have an obligation to contribute as much as we can.\nThe amount we contribute towards the §YFederation Naval Capacity§! counts for twice as much."
+
+ tr_diplomacy_the_federation:0 "Diplomatic Networking"
+ tr_diplomacy_the_federation_desc:2 "§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§! \n§YEncryption§! §G+1§!."
+ tr_diplomacy_the_federation_delayed:0 "We must build stable and lasting partnerships with our neighbors, based on trust and mutual respect. Together we are far stronger than we could ever hope to be alone."
+
+ tr_diplomacy_entente_coordination:0 "Subversive Diplomacy"
+ tr_diplomacy_entente_coordination_desc:0 "§YDecryption§! §G+1§!."
+ tr_diplomacy_entente_coordination_delayed:0 "Perhaps the most important purpose of a successful diplomacy is having more intel than your enemies."
+
+ tr_diplomacy_finish:0 "Diplomacy Traditions Finished"
+ tr_diplomacy_finish_effect:1 "§E$TRADITIONS_FINISH$:§!\nAdopting all $tr_diplomacy_adopt$ will increase our §Y$MOD_COUNTRY_TRUST_CAP_ADD$§! by §G+50§! and our §Y$MOD_COUNTRY_TRUST_GROWTH$§! by §G+33%§!.\nAditionally, our §Y$society$ Society Research Speed§! is increased by §G+5%§! and we gain §G+1§! envoy."
+ tr_diplomacy_adopt_desc:0 "$tradition_diplomacy_desc$\n\n$tr_diplomacy_adopt_effect$\n\n$tr_diplomacy_finish_effect$"
+ 
+ tr_versatility_universal_compatibility_desc:1 "§Y$MOD_COUNTRY_TRUST_CAP_ADD$§! increases by §G+50§! and £opinion£ §YOpinion§! increased by §G+20§!, but only with fellow $auth_machine_intelligence$ empires.\n§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§!."
+ 
+ 
+ requires_test:2 "$TRIGGER_FAIL$§RTest Failure.§!"
+ 
+ advanced_habitat_2:0 "Habitat World"

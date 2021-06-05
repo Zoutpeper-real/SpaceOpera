@@ -1,0 +1,115 @@
+	NGameplay = {
+		
+		VICTORY_YEAR_SLIDER_INTERVAL = 25 #Sopera_dev down from 50
+
+		
+		SHIPYARD_MAX_OVER_CAPACITY = 5.0		# Max amount of ships that we should want to be queued in one shipyard (x shipyard capacity)
+		SHIPYARD_DISTANCE_DIV_FACTOR = 3.0		# Sopera_dev: 2.0 > 3.0 Test The lower this is, the more reinforce tends to use the closest shipyard(s) available. Strongly NOT recommended to have this <1
+		SHIPYARD_REINFORCE_MAX_DISTANCE = 1000	# Shipyards further away than this from the closest shipyard will not be considered for reinforcements
+		
+		# No changes in federation block, thought we wanted some? Sopera_dev
+		FEDERATION_PERK_EXPERATION_MONTHS	= 3		# Month for picked perk to expire if level lost
+		FEDERATION_BASE_ETHICS				= 3		# count of unique ethics not penalized for federation cohesion
+		FEDERATION_ENVOY_BASE_EFFECT		= 1.0	# envoys base effect on cohesion
+		FEDERATION_MEMBERS_PENALTY			= -0.25	# penalty for each federation member
+		FEDERATION_NO_MEMBERS_PENALTY		= -100.0	# penalty if the federation has no members
+		FEDERATION_ETHICS_PENALTY			= -0.15	# Federation cohesion penalty for extra unique ethics
+		FEDERATION_OPPOSING_ETHICS_PENALTY	= -0.9	# Space_Opera: Federation cohesion for opposing ethics
+		FEDERATION_BASE_COHESION			= 5.0 	# base federation cohesion
+		FEDERATION_COHESION_RANGE			= 100	# max cohesion range
+		FEDERATION_COHESION_TO_XP			= 0.1	# cohesion to xp conversion
+		FEDERATION_MAX_FLEET_SIZE			= 0
+		FEDERATION_JOIN_COHESION_PENALTY	= -100	# Cohesion loss every time a new member is added to the federation (after the first two)
+		FEDERATION_LEAVE_COHESION_PENALTY	= -100  # Cohesion loss every time a member leaves the federation
+		FEDERATION_SWITCH_COHESION_PENALTY	= -50	# Cohesion loss when you switch federation type
+
+		ENVOY_IMPROVE_RELATION_BASE			= 0.25	# Monthly effect on opinion when an envoy is improving relations
+		ENVOY_IMPROVE_RELATION_MAX			= 100.0	# Maximum value from using envoys to improve relations
+		ENVOY_HARM_RELATION_BASE			= -0.5	# Monthly effect on opinion when an envoy is harming relations
+		ENVOY_HARM_RELATION_MIN				= -100.0	# Lowest possible value from using envoys to harm relations
+		ENVOY_RELATION_EFFECT_DECAY			= 1.0	# Every month that there is no envoy effecting opinion it moves towards 0 with this/month
+
+		EMBASSY_IMPROVE_RELATION_MULTIPLIER = 3	# Multiplies ENVOY_IMPROVE_RELATION_BASE if you have established embassies
+
+		#sopera_dev: this may be interesting to force certain FE's		
+		CUSTOM_EMPIRE_SPAWN_CHANCE 			= 50	# Chance that an empire will be created from an existing template instead of randomly generated (10 = 1% chance)
+		FALLEN_CUSTOM_EMPIRE_SPAWN_CHANCE 	= 50	# Chance that a fallen empire will be created from an existing template instead of randomly generated (10 = 1% chance)
+		FALLEN_EMPIRE_OUTER_BOUNDARY  		= 100	# Outer boundary of galaxy that fallen empire generation will try to avoid
+		FALLEN_EMPIRE_INNER_BOUNDARY		= 0		# Inner boundary of galaxy that fallen empire generation will try to avoid
+
+		#saopera_dev: also interesting to play with
+		DIPLOMACY_WEIGHT_BASE					= 0.0		# Base diplomacy weight for all empires
+		DIPLOMACY_WEIGHT_STANCE_FACTOR			= 0			# Factors weight from Diplo Stance before it is added to diplo weight
+		DIPLOMACY_WEIGHT_SPRAWL_FACTOR			= 0			# Factors Empire Sprawl before it is added to diplo weight
+		DIPLOMACY_WEIGHT_NAVAL_FACTOR			= 0.025		# Factors Naval Power before it is added to diplo weight
+		DIPLOMACY_WEIGHT_GESTALT_WEIGHT			= 1.0		# Gestalts gets a flat base value
+		DIPLOMACY_WEIGHT_POP_BASE				= 1.0		# Base diplomacy weight for each pop
+		DIPLOMACY_WEIGHT_POP_HAPPINESS			= 2.0		# as in formula: DIPLOMACY_WEIGHT_POP_BASE + (DIPLOMACY_WEIGHT_POP_HAPPINESS * Happiness)
+		DIPLOMACY_WEIGHT_ECONOMY_FACTOR			= 0.15		# Factors Economic Power before it is added to diplo weight
+		DIPLOMACY_WEIGHT_TECHNOLOGY_FACTOR		= 0.1		# Factors Technology Level before it is added to diplo weight
+
+		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.004	# Per empire size above base
+		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.006	# Per empire size above base
+
+
+		MIN_TRADE_DEAL_LENGTH_YEARS				= 10	# Minimum length of a trade deal in years.
+		MAX_TRADE_DEAL_LENGTH_YEARS				= 30	# Maximum length of a trade deal in years.
+
+		#Naval capacity sopera_dev: nothing changed yet
+		COMMAND_LIMIT_MAX										= 500	# Max value of Command Limit
+		COMMAND_LIMIT_BASE 										= 20	# Base value of Command Limit
+
+		NAVAL_CAPACITY_MAX										= 9999	# Max value of Naval Capacity
+		NAVAL_CAPACITY_BASE 									= 20	# Base value of Naval Capacity
+		NAVAL_CAPACITY_POP_MULT									= 0		# Mult value of Naval Capacity for each Pop
+
+		NAVAL_CAPACITY_BASE_GALACTIC_COMMUNITY					= 400	# Base value of Naval Capacity for the Galactic Defense Force/Imperial Armada
+
+		STARBASE_CAPACITY_MAX									= 999	# Max value of Starbase Capacity
+		STARBASE_CAPACITY_BASE 									= 3		# Base value of Starbase Capacity
+		STARBASE_CAPACITY_SYSTEM_MULT							= 0.10	# Mult value of Starbase Capacity for each owned system
+		STARBASE_CAPACITY_POP_MULT								= 0.00	# Mult value of Starbase Capacity for each Pop
+
+		
+	}
+
+	Ncombat = {
+		# Put any changes to base combat functionality here
+	}
+	NPop = {
+		# Put any changes to pop weights and growth here
+	}
+
+
+	NEconomy = {
+		CLAIM_COST_MAX						= 1000.0	# Space_Opera: 1000.0 Maximum cost of a single claim
+		CLAIM_COST_BASE						= 25.0		# Space_Opera: 50.0 The influence base cost of making claims
+		CLAIM_COST_STARBASE					= 50.0		# Space_Opera: 25.0 Added cost for upgraded starbase
+		CLAIM_COST_COLONY					= 125.0		# Space_Opera: 25.0 Added cost for colonized system
+		CLAIM_COST_DISTANCE					= 75.0		# Space_Opera: 25.0 Added per hyperlane jump away
+		CLAIM_COST_MULT_OFFENSIVE_WAR		= 1.0		# Space_Opera: 1.0 Claims are ( 1 + this ) much more expensive to add for attackers in war
+		CLAIM_COST_RIVAL_DISCOUNT 			= -0.10		# Space_Opera: 0.20 Claims are ( 1 + this ) much less expensive against rivals
+
+		COMMERCIAL_PACT_VALUE_MULT 			= 0.1
+
+		TRADE_AMOUNT_MULTIPLIER				= { 1 5 10 50 100 } # Multiplier interval for resource trading base amount
+		MARKET_TRADE_FEE_BASE				= 0.3	# Base procentage for market trade fee
+		MARKET_TRADE_FEE_MIN				= 0.05	# Minumum trade fee percentage
+		MARKET_FLUCTUATION_ABOVE_BASE_PRICE		= 0.3	# Space_Opera: 1 Base fluctuation when trading a resource' base amount if price is > 0
+		MARKET_FLUCTUATION_BELOW_BASE_PRICE		= 0.1	# Space_Opera: 0.2 Base fluctuation when trading a resource' base amount if price is < 0
+		MARKET_MIN_FLUCTUATION_FROM_BASE_PRICE	= -90	# Space_Opera: -80 Min fluctuation from base price
+		MARKET_MAX_FLUCTUATION_FROM_BASE_PRICE	= 1000	# Space_Opera: 400 Max fluctuation from base price
+		MARKET_DAYS_TO_BASE_PRICE				= 9000	# Space_Opera: 1800 Days until resource price reaches base price from max or min price
+		MARKET_FLUCTUATION_EPSILON			= 0.2	# Space_Opera: 0.5 If | fluctuation | < epsilon, reset fluctuation to zero
+		MARKET_MONTHLY_TRADE_FRACTION		= 0.1	# market base amount will be multiplied by this when determining starting amount of a monthly market trade
+		MARKET_MAX_BASE_AMOUNTS				= 200 	# Max resource base amounts that the player is allowed to trade in a single trade
+
+
+		PRICE_CHANGE_EQ_POS_C				= 2300000 	# Space_Opera: 320000 Constant C in f(x) = ( c / ( x - xo ) ) + d for f(x) > 0
+		PRICE_CHANGE_EQ_POS_D				= -211.023	# Space_Opera: -133.3 Constant D in f(x) = ( c / ( x - xo ) ) + d for f(x) > 0
+		PRICE_CHANGE_EQ_POS_X0				= -1899.22 	# Space_Opera: -600 Constant X0 in f(x) = ( c / ( x - xo ) ) + d for f(x) > 0
+
+		PRICE_CHANGE_EQ_NEG_C				= -100000	# Space_Opera: -45000 Constant C in f(x) = ( c / ( x - xo ) ) + d for f(x) < 0
+		PRICE_CHANGE_EQ_NEG_D				= 10 		# Space_Opera: 20 Constant D in f(x) = ( c / ( x - xo ) ) + d for f(x) < 0
+		PRICE_CHANGE_EQ_NEG_X0				= -1000		# Space_Opera: -450 Constant X0 in f(x) = ( c / ( x - xo ) ) + d for f(x) < 0
+	}
