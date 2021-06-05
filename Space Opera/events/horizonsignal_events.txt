@@ -6,7 +6,7 @@
 
 namespace = akx
 
-fleet_event = {
+ship_event = {
 	id = akx.8888
 	title = akx.9000.name
 	desc = {
@@ -54,7 +54,7 @@ fleet_event = {
 
 # triggered by on_entering_system_fleet
 # chance to trigger the first time a player enters a black hole system
-fleet_event = {
+ship_event = {
 	id = akx.9000
 	title = akx.9000.name
 	desc = akx.9000.desc
@@ -68,15 +68,16 @@ fleet_event = {
 	fire_only_once = yes
 
 	trigger = {
-
-		is_multiplayer = no
 		NOT = { has_global_flag = akx.9000.fired }
 		owner = {
 			is_ai = no
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 		}
 		from = { # solar system scope
+			OR = {
 			is_star_class = sc_black_hole
+			is_star_class = sc_s_black_hole
+			}
 			NOT = { has_star_flag = guardian }
 		}
 		exists = leader
@@ -924,7 +925,6 @@ fleet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_multiplayer = no
 		owner = {
 			is_ai = no
 			has_country_flag = worm_events_available
@@ -1465,7 +1465,6 @@ fleet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		is_multiplayer = no
 		owner = {
 			has_country_flag = worm_events_available
 			NOT = { has_country_flag = syzygy_encountered }
@@ -3130,7 +3129,6 @@ fleet_event = {
 	diplomatic = yes
 
 	trigger = {
-		is_multiplayer = no
 		owner = {
 			is_ai = no
 			has_country_flag = worm_events_available
@@ -3401,7 +3399,6 @@ fleet_event = {
 	diplomatic = yes
 
 	trigger = {
-		is_multiplayer = no
 		from = {
 			any_fleet_in_system = {
 				exists = owner
