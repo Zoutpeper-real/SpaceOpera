@@ -5,7 +5,7 @@ building_fortress = {
 	position_priority = 100
 
 	category = army
-	
+
 	allow = {
 		OR = {
 			AND = {
@@ -17,7 +17,7 @@ building_fortress = {
 		}
 		
 	}
-	
+
 	destroy_trigger = {
 		exists = owner
 		owner = { is_ai = yes }
@@ -30,7 +30,7 @@ building_fortress = {
 			buildings_no_motes = yes
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -52,20 +52,29 @@ building_fortress = {
 
 	resources = {
 		category = planet_buildings_strongholds
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 3
+		}
 		cost = {
 			minerals = @b2_minerals
 			volatile_motes = @b2_rare_cost
-		}			
+		}
 		upkeep = {
 			energy = 1
 			volatile_motes = @b2_rare_upkeep
 		}
 	}
-	
+
 	prerequisites = {
 		"tech_global_defense_grid"
 	}
-	
+
 	triggered_desc = {
 		trigger = {
 			exists = owner

@@ -42,7 +42,92 @@ action_invite_to_federation = {
 	}
 
 	possible = {
-		#makes federations a tech unlock instead of tradition Space_opera
+		
+		custom_tooltip = {
+			fail_text = "federation_requires_materialist"
+			OR = {
+				has_federation = no
+				federation = { NOT = { has_federation_type = research_federation } }
+				from = { has_ethic = ethic_materialist }
+				from = { has_ethic = ethic_fanatic_materialist }
+				from = { has_authority = auth_machine_intelligence }
+				from = { has_valid_civic = civic_hive_natural_neural_network }
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "federation_requires_militarist"
+			OR = {
+				has_federation = no
+				federation = { NOT = { has_federation_type = military_federation } }
+				from = { has_ethic = ethic_militarist }
+				from = { has_ethic = ethic_fanatic_militarist }
+				from = { has_valid_civic = civic_machine_warbots }
+				from = { has_valid_civic = civic_hive_strength_of_legions }
+				from = { has_valid_civic = civic_hive_subspace_ephapse }
+			}
+		}
+		
+		custom_tooltip = {
+			fail_text = "federation_requires_trade"
+			OR = {
+				has_federation = no
+				federation = { NOT = { has_federation_type = trade_federation } }
+				from = { has_valid_civic = civic_corporate_dominion }
+				from = { has_valid_civic = civic_merchant_guilds }
+				from = { has_authority = auth_corporate }
+			}
+		}
+		
+		custom_tooltip =  {
+			fail_text = "federation_size_limit_fail"
+			OR = {
+				has_federation = no
+				federation = {
+					OR = {
+						AND = {
+							num_members < 3
+							federation_level < 3
+						}
+						AND = {
+							num_members < 4
+							federation_level < 3
+							has_federation_type = hegemony_federation
+						}
+						AND = {
+							num_members < 4
+							federation_level = 3
+						}
+						AND = {
+							num_members < 5
+							federation_level = 3
+							has_federation_type = hegemony_federation
+						}
+						AND = {
+							num_members < 5
+							federation_level = 4
+						}
+						AND = {
+							num_members < 6
+							federation_level = 4
+							has_federation_type = hegemony_federation
+						}
+						AND = {
+							num_members < 8
+							federation_level = 5
+						}
+						AND = {
+							num_members < 9
+							federation_level = 5
+							has_federation_type = hegemony_federation
+						}
+					}
+				}
+			}
+		}
+
+
+		#makes federations a tech unlock instead of tradition; Space Opera Edit.
 		custom_tooltip = {
 			fail_text = "requires_technology_the_federation"
 			OR = {
@@ -117,10 +202,30 @@ action_invite_to_federation = {
 			}
 		}
 
-		custom_tooltip = {
-			fail_text = "requires_recipient_not_inward_perfection"
-			from = { NOT = { has_valid_civic = civic_inwards_perfection	} }
+		
+		if = {
+			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = requires_recipient_not_inward_perfection
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = diplo_action_no_low_intel
+					always = no
+				}
+			}
 		}
+		
+		
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
 			NOT = { has_valid_civic = civic_inwards_perfection }
@@ -132,6 +237,18 @@ action_invite_to_federation = {
 				from = { is_same_value = prevprev } # Bypass opinion check if we are proposing on behalf of recipient
 				opinion_level = { who = from level >= excellent }
 				is_improving_relations_with = from
+			}
+		}
+		
+		# Members of the Galactic Empire can't be in federations
+		custom_tooltip = {
+			fail_text = "requires_actor_recipient_not_in_galactic_empire"
+			NAND = {
+				has_galactic_emperor = yes
+				OR = {
+					is_galactic_community_member = yes
+					from = { is_galactic_community_member = yes }
+				}
 			}
 		}
 	}

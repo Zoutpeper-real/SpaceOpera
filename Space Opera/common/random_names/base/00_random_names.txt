@@ -73,6 +73,7 @@ black_hole_names = {
 	"Abaddons_Demesne"
 	"Eye_of_Hawking"
 	"Eye_of_Bal"
+	"Vat's Suffering"
 }
 
 asteroid_prefix = {
@@ -1124,6 +1125,7 @@ star_names = {
 	Shashamar
 	Mareenius
 	Lawam
+	Lepod
 	Osellus
 	Larbo
 	Linngol
@@ -1800,13 +1802,13 @@ star_names = {
 }
 
 nebula_names = {
-	"Picaress_Drift"
-	"Yinarim_Nebula"
-	"Temestra_Badlands"
+	#"Picaress_Drift"
+	#"Yinarim_Nebula"
+	#"Temestra_Badlands"
 	#"Arija_Patch"
-	"Tyjanock_Expanse"
-	"Harriban_Nebula"
-	"Erium_Nebula"
+	#"Tyjanock_Expanse"
+	#"Harriban_Nebula"
+	#"Erium_Nebula"
 	"Najaggus_Veil"
 	"Cebellus_Shroud"
 	#"Yothmore_Shroud"
@@ -1814,26 +1816,26 @@ nebula_names = {
 	#"Sejanis_Expanse"
 	"Kanthares_Miasma"
 	"Ibannic_Veil"
-	"Ultaaran_Miasma"
+	#"Ultaaran_Miasma"
 	"Zhakira_Patch"
-	"Zadanis_Nebula"
+	#"Zadanis_Nebula"
 	"Grasping_Claw_Nebula"
 	#"Oracles_Grave_Nebula"
 	"Demons_Eye_Nebula"
-	"Weeping_Ghost_Nebula"
+	#"Weeping_Ghost_Nebula"
 	"Forbidden_Nebula"
-	"Crossroads_Nebula"
+	#"Crossroads_Nebula"
 	#"Whispering_Garden_Nebula"
 	"Dark_Hopes_Nebula"
 	"Shining_Pearl_Nebula"
-	"Twin_Fangs_Nebula"
-	"Void_Sea_Nebula"
+	#"Twin_Fangs_Nebula"
+	#"Void_Sea_Nebula"
 	"Shadow_Nebula"
 	"Abbanis_Nebula"
 	"Nythran_Expanse"
 	#"Unar_Patch"
 	"Daturi_Expanse"
-	"Orantes_Shroud"
+	#"Orantes_Shroud"
 	"Gamus_Veil"
 	#"Shiigur_Nebula"
 	#"VaelZulush_Nebula"
@@ -1855,4 +1857,21 @@ nebula_names = {
 	"Rainbow Nebula"
 	"Crusader Nebula"
 	"Taveer Badlands"
+	"Charles Cloud"
+	"Ticlan Whisper"
+	"Visandi Drift"
+	"Bulwark Badlands"
+	"Karsan Nebula"
+	"Eik's Betrayal"
+	"Uregarp Drift"
+	"Nayari Veil"
+	"Zachria Nebula"
+	"Krekari Cloud"
+	"Faraia Expanse"
+	"Ethiran Shroud"
+	"Qlorc Cloud"
+	"Steel Silence"
+	"Vivis Veil"
+	"Alari Expanse"
+	"Batkyn Badlands"
 }

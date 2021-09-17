@@ -24,6 +24,12 @@ tech_form_federations = {
 		}
 		
 	}
+	prereqfor_desc = {
+		custom = {
+			title = "tech_form_federations_partial_custom"
+			desc = "tech_form_federations_partial_custom_desc"
+		}
+	}
 }
 
 # entente coordination

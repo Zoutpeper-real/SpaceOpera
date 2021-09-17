@@ -27,15 +27,6 @@ head_researcher = {
 			engineering_research = 5
 			society_research = 5
 		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = research_subsidies
-				}
-			}
-			energy = 1
-		}
 	}
 
 	planet_modifier = {
@@ -71,7 +62,7 @@ head_researcher = {
 			planet_amenities_add = 1
 		}
 	}
-
+	
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
@@ -157,6 +148,18 @@ head_researcher = {
 			has_trait = trait_necrophage
 		}
 		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
+		modifier = {
 			factor = 0.01
 			exists = planet
 			exists = planet.controller
@@ -232,7 +235,7 @@ high_priest = {
 			planet_amenities_add = -1
 		}
 	}
-	
+
 	#Space Opera#
 	triggered_planet_modifier = {
 		potential = {
@@ -242,7 +245,7 @@ high_priest = {
 			planet_amenities_add = 1
 		}
 	}
-
+	
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
@@ -285,6 +288,13 @@ high_priest = {
 			factor = 5
 			has_job = high_priest
 		}
+		
+		#Space Opera#
+		modifier = {
+		factor = 2
+			has_trait = trait_dignified
+		}
+		
 		modifier = {
 			factor = 1.5
 			has_trait = trait_brainslug
@@ -301,10 +311,17 @@ high_priest = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
-		#Space Opera#
 		modifier = {
-		factor = 2
-			has_trait = trait_dignified
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
 		}
 		# crisis purge
 		modifier = {
@@ -349,7 +366,7 @@ administrator = {
 	planet_modifier = {
 		planet_amenities_add = 8
 	}
-	
+
 	#Space Opera#
 	triggered_planet_modifier = {
 		potential = {
@@ -360,6 +377,7 @@ administrator = {
 		}
 	}
 
+	
 	triggered_planet_modifier = {
 		potential = {
 			OR = {
@@ -429,6 +447,18 @@ administrator = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -477,7 +507,7 @@ noble = {
 	planet_modifier = {
 		planet_stability_add = 5
 	}
-	
+
 	#Space Opera#
 	triggered_planet_modifier = {
 		potential = {
@@ -487,7 +517,7 @@ noble = {
 			planet_stability_add = 1
 		}
 	}
-
+	
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
@@ -519,6 +549,18 @@ noble = {
 			factor = 1.5
 			has_trait = trait_necrophage
 		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
+		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -538,6 +580,7 @@ noble = {
 				}
 			}
 		}
+		
 		#Space Opera#
 		modifier = {
 		factor = 2
@@ -617,7 +660,7 @@ merchant = {
 			planet_amenities_add = -1
 		}
 	}
-	
+
 	#Space Opera#
 	triggered_planet_modifier = {
 		potential = {
@@ -628,7 +671,7 @@ merchant = {
 			planet_amenities_add = 1
 		}
 	}
-
+	
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
@@ -668,6 +711,18 @@ merchant = {
 			factor = 1.125
 			owner = { has_civic = civic_merchant_guilds	}
 			has_trait = trait_robust
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
 		}
 		# crisis purge
 		modifier = {
@@ -774,7 +829,7 @@ executive = {
 			planet_amenities_add = 1
 		}
 	}
-
+	
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
@@ -806,6 +861,18 @@ executive = {
 		modifier = {
 			factor = 5
 			has_job = executive
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_planet_class = pc_habitat }
+		}
+		modifier = {
+			factor = 0.85
+			has_trait = trait_void_dweller_1
+			exists = planet
+			planet = { is_artificial = no }
 		}
 		# crisis purge
 		modifier = {

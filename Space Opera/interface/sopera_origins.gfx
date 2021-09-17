@@ -5,10 +5,4 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/origins/hw_origin_picture.dds"
 		alwaystransparent = yes
 	}
-	
-	spriteType = {
-		name = "GFX_origin_clone"
-		texturefile = "gfx/event_pictures/origins/clone_origin.dds"
-		alwaystransparent = yes
-	}
 }

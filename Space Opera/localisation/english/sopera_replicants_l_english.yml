@@ -3,21 +3,3 @@
  origin_hive_world_desc:0 "This planet's silicon structure has caused an emerging supercomputer to form."
  origin_tooltip_hive_world_effects:0 "Start with a §YHive World§! as your Homeworld"
  
- origin_clone:0 "Replicants"
- origin_clone_desc:0 "This nation is comprised of clones of a single person.\nPerfect Unity."
- origin_tooltip_clone_effects:0 "Pops cannot breed \nCan only assemble organic pops using clone vats."
- 
- trait_clone:0 "Clone"
- trait_clone_desc:0 "§LThis species is comprised of clones produced with advanced cloning techniques. All minds think alike.§!"
- 
- job_clone:0 "Cloning Engineer"
- job_clone_plural:0 "Cloning Engineers"
- job_clone_desc:0 "These specialist work at the cloning facilities in order to create more of oursleves."
- mod_job_clone_add:0 "$job_clone$ Jobs"
- mod_job_clone_per_pop:0 "§G+1§! $job_clone$ Job per $VALUE$ Pops"
- mod_job_clone_per_pop_short:0 "\n§G+1§! £mod_job_clone_add£ per $VALUE$ £pop£"
- 
- building_clone_vats_origin:0 "Replication Vats"
- building_clone_vats_origin_desc:3 "Replication Vats break down simple organic materials like food to generate Organic Pop Assembly."
- name_list_CLONE:0 "Charles Clone"
- 

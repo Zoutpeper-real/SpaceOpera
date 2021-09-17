@@ -1,159 +1,23 @@
 tr_diplomacy_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_society_tech_research_speed = 0.05 #Space Opera
 		envoys_add = 1 #Space Opera
-	}
+	}	
 	on_enabled = {
-			add_research_option = tech_form_federations #Space Opera
-			add_tech_progress = {
-			tech = tech_form_federations
-			progress = 0.12
-			}
-		}
-	
-
-	tradition_swap = {
-		name = tr_adaptability_finish
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		trigger = {
-			NOT = { has_origin = origin_void_dwellers }
-			OR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_inwards_perfection
-				is_hive_empire = yes
-				has_valid_civic = civic_barbaric_despoilers
-				has_origin = origin_necrophage
-			}
-		}
-		modifier = {
-			ascension_perks_add = 1
-		}
-		weight = {
-			factor = 1
-		}
-	}
-
-	tradition_swap = {
-		name = tr_adaptability_void_finish
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		trigger = {
-			has_origin = origin_void_dwellers
-			OR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_barbaric_despoilers
-			}
-		}
-		modifier = {
-			ascension_perks_add = 1
-		}
-		weight = {
-			factor = 1
-		}
-	}
-
-	tradition_swap = {
-		name = tr_versatility_finish
-		inherit_effects = no
-		inherit_icon = yes
-		inherit_name = yes
-		trigger = {
-			is_machine_empire = yes
-		}
-		modifier = {
-			planet_building_refund_mult = 0.5
-			ascension_perks_add = 1
-		}
-		weight = {
-			factor = 1
+		add_research_option = tech_form_federations #Space Opera
+		add_tech_progress = {
+		tech = tech_form_federations
+		progress = 0.12
 		}
 	}
 }
 
 tr_diplomacy_the_federation = {
 
-	#unlocks federation mechanic
+	#unlocks federation mechanic #Space Opera: No it does not
 	modifier = {
 		envoys_add = 1
 		intel_encryption_add = 1 #Space Opera
-	}
-
-	tradition_swap = {
-		name = tr_adaptability_dietary_enrichment
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			OR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_hive_devouring_swarm
-				# Barbaric Despoilers can create Martial Alliances and Hegemonies if they have the Federations DLC
-				AND = {
-					has_valid_civic = civic_barbaric_despoilers
-					has_federations_dlc = no
-				}
-#				has_origin = origin_necrophage #necrophage federations, why not I guess :D
-			}
-			is_lithoid_empire = no
-		}
-		modifier = {
-			country_food_produces_mult = 0.10
-		}
-		weight = {
-			factor = 1
-		}
-	}
-
-	tradition_swap = {
-		name = tr_adaptability_recycling
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			OR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_hive_devouring_swarm
-
-				# Barbaric Despoilers can create Martial Alliances and Hegemonies if they have the Federations DLC
-				AND = {
-					has_valid_civic = civic_barbaric_despoilers
-					has_federations_dlc = no
-				}
-#				has_origin = origin_necrophage #necrophage federations, why not I guess :D
-			}
-			is_lithoid_empire = yes
-		}
-		modifier = {
-			planet_building_refund_mult = 0.15
-		}
-		weight = {
-			factor = 1
-		}
-	}
-
-	tradition_swap = {
-		name = tr_versatility_universal_compatibility
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			is_machine_empire = yes
-		}
-		modifier = {
-			country_synthetic_trust_cap_add = 50
-			envoys_add = 1
-		}
-
-		weight = {
-			factor = 1
-		}
 	}
 
 	ai_weight = {
@@ -168,46 +32,6 @@ tr_diplomacy_entente_coordination = {
 
 	modifier = {
 		intel_decryption_add = 1 #Space Opera
-		
-	}
-
-	tradition_swap = {
-		name = tr_adaptability_survival_fittest
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			OR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_inwards_perfection
-				is_hive_empire = yes
-				has_valid_civic = civic_barbaric_despoilers
-				has_origin = origin_necrophage
-			}
-		}
-		modifier = {
-			planet_orbital_bombardment_damage = -0.25
-			army_defense_damage_mult = 0.25
-		}
-		weight = {
-			factor = 1
-		}
-	}
-
-	tradition_swap = {
-		name = tr_versatility_adaptive_programming
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			is_machine_empire = yes
-		}
-		modifier = {
-			country_trade_fee = -0.10
-		}
-		weight = {
-			factor = 1
-		}
 	}
 
 	ai_weight = {

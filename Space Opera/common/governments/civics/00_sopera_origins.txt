@@ -12,7 +12,7 @@ origin_hive_world = {
 	
 	possible = {
 		authority = { value = auth_hive_mind }
-		species = {
+		species_archetype = {
 			value = LITHOID
 		}
 	}
@@ -20,30 +20,6 @@ origin_hive_world = {
 	random_weight = {
 		base = 1
 	}	# Makes AI able to get the origin?
-}
-
-origin_clone = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_clone.dds"
-	picture = GFX_origin_clone
-	max_once_global = yes
-	
-	description = "origin_tooltip_clone_effects"
-	
-	potential = {
-		always = yes
-	}
-	
-	traits = {
-		trait = trait_clone
-	}
-	possible = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-	}
-	
-	random_weight = {
-		base = 0
-	}	# Makes AI unable to get the origin?
 }
 
 origin_relic = {

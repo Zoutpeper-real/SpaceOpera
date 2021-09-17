@@ -1,5 +1,0 @@
-empire_init_add_technologies = {
-	events = {
-		sopera.1 #clone tech
-	}
-}
