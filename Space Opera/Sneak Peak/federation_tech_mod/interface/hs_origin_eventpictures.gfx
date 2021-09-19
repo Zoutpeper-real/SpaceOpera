@@ -1,8 +1,0 @@
-spriteTypes = {
-
-	spriteType = {
-		name = "GFX_origin_house"
-		texturefile = "gfx/event_pictures/origins/hs_origin_picture.dds"
-		alwaystransparent = yes
-	}
-}
