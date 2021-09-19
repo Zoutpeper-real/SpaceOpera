@@ -3,9 +3,4 @@ spriteTypes = {
 		name = "GFX_tech_form_federations"
 		textureFile = "gfx/interface/icons/traditions/tradition_diplomacy_the_federation.dds"
 	}
-
-	spriteType = {
-		name = "GFX_tech_entente_coordination"
-		textureFile = "gfx/interface/icons/traditions/tradition_diplomacy_entente_coordination.dds"
-	}
 }

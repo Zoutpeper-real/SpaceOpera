@@ -6,8 +6,8 @@ tr_diplomacy_finish = {
 	on_enabled = {
 		add_research_option = tech_form_federations #Space Opera
 		add_tech_progress = {
-		tech = tech_form_federations
-		progress = 0.12
+			tech = tech_form_federations
+			progress = 0.12
 		}
 	}
 }
@@ -32,24 +32,9 @@ tr_diplomacy_the_federation = {
 	#unlocks federation mechanic #Space Opera: No it does not
 	modifier = {
 		envoys_add = 1
-		intel_encryption_add = 1 #Space Opera
 	}
 
 	ai_weight = {
 		factor = 1000
-	}
-}
-
-tr_diplomacy_entente_coordination = {
-	possible = {
-		has_tradition = tr_diplomacy_the_federation
-	}
-
-	modifier = {
-		intel_decryption_add = 1 #Space Opera
-	}
-
-	ai_weight = {
-		factor = 5000
 	}
 }
