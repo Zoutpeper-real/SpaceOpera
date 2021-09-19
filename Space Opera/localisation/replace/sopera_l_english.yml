@@ -1,0 +1,12 @@
+﻿l_english:
+ tr_diplomacy_the_federation:0 "Cooperation Guidelines"
+ tr_diplomacy_the_federation_desc:2 "§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§! \n§YEncryption§! §G+1§!."
+ tr_diplomacy_the_federation_delayed:0 "We must build stable and lasting partnerships with our neighbors, based on trust and mutual respect. Together we are far stronger than we could ever hope to be alone."
+
+ tr_diplomacy_entente_coordination:0 "Subversive Diplomacy"
+ tr_diplomacy_entente_coordination_desc:0 "§YCodebreaking§! §G+1§!."
+ tr_diplomacy_entente_coordination_delayed:0 "Perhaps the most important purpose of a successful diplomacy is having more intel than your enemies."
+
+ tr_diplomacy_finish:0 "Diplomacy Traditions Finished"
+ tr_diplomacy_finish_desc:1 "Increases our §Y$MOD_COUNTRY_TRUST_CAP_ADD$§! by §G+50§! and our §Y$MOD_COUNTRY_TRUST_GROWTH$§! by §G+33%§!.\nUnlocks the technology §GFederations§!.\n§HAvailable Envoys§! §G+1§!."
+ tr_diplomacy_adopt_desc:0 "$tradition_diplomacy_desc$\n\n$tr_diplomacy_adopt_effect$\n\n$tr_diplomacy_finish_effect$"
