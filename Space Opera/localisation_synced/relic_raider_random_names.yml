@@ -1,6 +1,4 @@
 ﻿l_default:
  ############### WAR NAME ###################
-War_of_Relic: "War for a Relic"
-Treasury_War: "Treasure War"
-War_of_all_Relic: "War for Relics"
-Total_Treasury_War: "Total Treasury War"
+    War_of_Relic: "War for a Relic"
+    Treasury_War: "Treasure War"
