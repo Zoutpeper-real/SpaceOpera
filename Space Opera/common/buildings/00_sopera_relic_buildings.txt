@@ -80,6 +80,160 @@ building_relic_archive = {
              job_relic_archivist_add = 6
         }
     }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 7 }
+        }
+        modifier = {
+             job_relic_archivist_add = 7
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 8 }
+        }
+        modifier = {
+             job_relic_archivist_add = 8
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 9 }
+        }
+        modifier = {
+             job_relic_archivist_add = 9
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 10 }
+        }
+        modifier = {
+             job_relic_archivist_add = 10
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 11 }
+        }
+        modifier = {
+             job_relic_archivist_add = 11
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 12 }
+        }
+        modifier = {
+             job_relic_archivist_add = 12
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 13 }
+        }
+        modifier = {
+             job_relic_archivist_add = 13
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 14 }
+        }
+        modifier = {
+             job_relic_archivist_add = 14
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 15 }
+        }
+        modifier = {
+             job_relic_archivist_add = 15
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 16 }
+        }
+        modifier = {
+             job_relic_archivist_add = 16
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 17 }
+        }
+        modifier = {
+             job_relic_archivist_add = 17
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 18 }
+        }
+        modifier = {
+             job_relic_archivist_add = 18
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 19 }
+        }
+        modifier = {
+             job_relic_archivist_add = 19
+        }
+    }
+	
+	triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+           owner = { num_owned_relics = 20 }
+        }
+        modifier = {
+             job_relic_archivist_add = 20
+        }
+    }
 
     triggered_desc = {
 		text = job_relic_archivist_effect_desc

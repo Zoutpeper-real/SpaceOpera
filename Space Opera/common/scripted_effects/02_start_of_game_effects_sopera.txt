@@ -1,6 +1,11 @@
 generate_start_buildings_and_districts = {
 	if = {
-		limit = { NOT = { owner = { has_origin = origin_shattered_ring } } }
+		limit = {
+			NOT = {
+				owner = { has_origin = origin_shattered_ring }
+			}
+		}
+
 		if = {
 			limit = {
 				owner = {
@@ -60,8 +65,11 @@ generate_start_buildings_and_districts = {
 				}
 			}
 			else = {
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_farming
+				while = {
+					count = 2 
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming
+					}
 				}
 			}
 
@@ -160,39 +168,92 @@ generate_start_buildings_and_districts = {
 			add_building = building_bureaucratic_1
 
 			# 2 jobs
-			add_building = building_research_lab_1
+			if = {
+				limit = {
+					owner = {
+						has_valid_civic = civic_reanimated_armies
+					}
+				}
+				add_building = building_dread_encampment
+
+				solar_system = { #Necromancers do not give engineering. So make sure there's some readily-accessible engineering
+					while = {
+						count = 2
+						random_system_planet = {
+							limit = {
+								has_deposit_for = shipclass_research_station
+								NOT = { has_deposit = d_engineering_6 }
+							}
+							clear_deposits = yes
+							add_deposit = d_engineering_6
+						}
+					}
+				}
+			}
+			else = {
+				add_building = building_research_lab_1
+			}
 
 			# 4-5 jobs
 			if = {
 				limit = {
 					owner = {
-						OR = {
+						NOT = { has_valid_civic = civic_agrarian_idyll }
+					}
+				}
+				if = {
+					limit = {
+						owner = {
 							is_spiritualist = no
-							is_megacorp = yes
+							has_valid_civic = civic_pleasure_seekers
 						}
 					}
-				}
-				add_building = building_commercial_zone
-			}
-			else_if = {
-				limit = {
-					owner = {
-						has_valid_civic = civic_death_cult
+					add_building = building_holo_theatres
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
 					}
 				}
-				add_building = building_sacrificial_temple_1
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
+				else_if = {
+					limit = {
+						owner = {
+							has_origin = origin_relic
+						}
+					}
+					add_building = building_relic_archive
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
+					}
 				}
-			}
-			else = {
-				add_building = building_temple
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
+				else_if = {
+					limit = {
+						owner = {
+							is_spiritualist = yes
+							has_valid_civic = civic_death_cult
+						}
+					}
+					add_building = building_sacrificial_temple_1
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							is_megacorp = no
+							is_spiritualist = yes
+						}
+					}
+					add_building = building_temple
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_industrial
+					}
+				}
+				else = {
+					add_building = building_commercial_zone
 				}
 			}
 		}
-
+		
 		if = {
 			limit = { owner = { is_hive_empire = yes } }
 
@@ -203,10 +264,10 @@ generate_start_buildings_and_districts = {
 					district = district_hive
 				}
 			}
-			
+
 			if = {
 				limit = { owner = { NOT = { has_origin = origin_hive_world } } }
-			
+				
 				# 6-9 jobs
 				if = {
 					limit = { owner = { is_lithoid_empire = no } }
@@ -226,7 +287,6 @@ generate_start_buildings_and_districts = {
 					}
 				}
 				else = {
-					
 					while = {
 						count = 2
 						add_district_and_planet_size_if_needed_effect = {
@@ -306,13 +366,27 @@ generate_start_buildings_and_districts = {
 			add_building = building_hive_capital
 
 			# 2 jobs
-			add_building = building_hive_node
-
-			# 2 jobs
 			add_building = building_research_lab_1
 
-			# 1 job
-			add_building = building_spawning_pool
+			if = {
+				limit = { #Necrophages need fewer complex drones or the menial drone slots won't be filled
+					NOT = { owner = { has_origin = origin_necrophage } }
+				}
+				# 2 jobs
+				add_building = building_hive_node
+			}
+			if = { #This building is very useless for Devouring Swarm Necrophages
+				limit = {
+					NOT = {
+						owner = {
+							has_origin = origin_necrophage
+							has_valid_civic = civic_hive_devouring_swarm
+						}
+					}
+				}
+				# 1 job
+				add_building = building_spawning_pool
+			}
 		}
 
 		# Replace capital building for machine empires
@@ -440,15 +514,70 @@ generate_start_buildings_and_districts = {
 					limit = { owner = { has_civic = civic_machine_assimilator } }
 					add_deposit = d_organic_slurry
 				}
+
+				# Blocker that removes the extra machine world replicator jobs until removed
+				add_deposit = d_resource_consolidation_1
+			}
+		}
+		# Replace a mining district with a farming district for lithoid empires with an organic secondary species that use food for alloy production
+		if = {
+			limit = {
+				owner = {
+					is_lithoid_empire = yes
+					has_country_flag = non_lithoid_subspecies
+					is_catalytic_empire = yes
+				}
+			}
+			remove_district = district_mining
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_farming
+			}
+		}
+		# Replace two mining districts with farming district for non-machine empires that use food for alloy production
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = non_lithoid_subspecies }
+					NOT = { has_authority = auth_machine_intelligence }
+					is_catalytic_empire = yes
+				}
+			}
+			while = {
+				count = 2
+				remove_district = district_mining
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_farming
+				}
+			}
+		}
+		# And machine empires swap a generator district for another farming district
+		if = {
+			limit = {
+				owner = {
+					has_authority = auth_machine_intelligence
+					is_catalytic_empire = yes
+				}
+			}
+			remove_district = district_mining
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_farming
+			}
+			remove_district = district_generator
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_farming
 			}
 		}
 	}
+
 	if = {
-		limit = { owner = { has_origin = origin_shattered_ring } }
-		add_district_and_planet_size_if_needed_effect = {
-			district = district_rw_farming
+		limit = {
+			owner = { has_origin = origin_shattered_ring }
 		}
-		add_deposit = d_arcane_generator
+		
+		add_deposit = d_segment_rubble_1
+		add_deposit = d_segment_rubble_2
+		add_deposit = d_segment_rubble_3
+		add_deposit = d_segment_rubble_4
 		add_deposit = d_decrepit_tunnels_1
 		add_deposit = d_decrepit_tunnels_2
 		add_deposit = d_decrepit_tunnels_3
@@ -456,8 +585,32 @@ generate_start_buildings_and_districts = {
 		if = {
 			limit = {
 				owner = {
+					has_civic = civic_machine_servitor
+				}
+			}
+			add_deposit = d_unsupervised_settlement
+		}
+
+		else_if = {
+			limit = {
+				owner = {
+					has_authority = auth_hive_mind
+				}
+			}
+			add_deposit = d_collapsed_burrows
+		}
+
+		else = {
+			add_deposit = d_decrepit_dwellings
+		}
+	
+		if = {
+			limit = {
+				owner = {
 					is_lithoid_empire = yes
-					NOT = { has_civic = civic_hive_devouring_swarm }
+					NOT = {
+						has_valid_civic = civic_hive_devouring_swarm
+					}
 				}
 			}
 			while = {
@@ -465,12 +618,12 @@ generate_start_buildings_and_districts = {
 				add_deposit = d_hibernating_lithoids
 			}
 		}
-
+	
 		if = {
 			limit = {
 				owner = {
 					is_lithoid_empire = yes
-					has_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_hive_devouring_swarm
 				}
 			}
 			while = {
@@ -482,25 +635,130 @@ generate_start_buildings_and_districts = {
 		if = {
 			limit = {
 				owner = {
-					is_lithoid_empire = yes
-					is_hive_empire = yes
+					OR = {
+						has_valid_civic = civic_machine_assimilator
+						has_valid_civic = civic_machine_servitor
+					}
 				}
 			}
-			remove_district = district_rw_farming
 
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_generator
+			if = {
+				limit = {
+					owner = {
+						last_created_species = { is_lithoid = yes }
+					}
+				}
+				owner = {
+					set_country_flag = lithoid_subspecies
+				}
+			}
+			else = {
+				owner = {
+					set_country_flag = non_lithoid_subspecies
+				}
 			}
 		}
 
 		if = {
-			limit = { owner = { is_regular_empire = yes } }
+			limit = {
+				owner = { is_regular_empire = yes }
+			}
 
+			# total - 24 jobs
+
+			# 3 jobs
 			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_city
+				district = district_city
+			}
+
+			if = {
+				limit = {
+					owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_city
+					}
+				}
+			}
+			else = {
+				while = {
+					count = 2 
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming_uncapped
+					}
+				}
+			}
+
+			if = {
+				limit = { owner = { is_megacorp = yes } }
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_city
+				}
+			}
+
+			# 4 - 6 jobs
+			if = {
+				limit = {
+					owner = {
+						OR = {
+							is_lithoid_empire = no
+							has_country_flag = non_lithoid_subspecies
+						}
+					}
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming_uncapped
+					}
+				}
+				if = {
+					limit = {
+						owner = { has_origin = origin_default }
+					}
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming_uncapped
+					}
+				}
+			}
+			else = {
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining_uncapped
+					}
+				}
+			}
+
+			# 4 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining_uncapped
+				}
+			}
+
+			# 2 jobs
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_srw_commercial
+			}
+
+			# 4 jobs
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_mining_uncapped
 			}
 			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_industrial
+				district = district_srw_commercial
+			}
+
+			# 2 jobs
+			if = {
+				limit = { owner = { is_megacorp = no } }
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_srw_commercial
+				}
 			}
 
 			# 3 jobs
@@ -510,57 +768,181 @@ generate_start_buildings_and_districts = {
 			add_building = building_bureaucratic_1
 
 			# 2 jobs
-			add_building = building_research_lab_1
-
-			# 5 jobs
 			if = {
-				limit = { owner = { is_megacorp = yes } }
-				add_building = building_commercial_zone
+				limit = {
+					owner = {
+						has_valid_civic = civic_reanimated_armies
+					}
+				}
+				add_building = building_dread_encampment
+
+				solar_system = { #Necromancers do not give engineering. So make sure there's some readily-accessible engineering
+					random_system_planet = {
+						limit = {
+							has_deposit_for = shipclass_research_station
+							has_deposit = d_engineering_5
+						}
+						# Total size 15 deposit as the Irreparable Damage is normally a size 5 and non-Shattered Ring starts get an additional two size 6 deposits.
+						add_deposit = d_engineering_10
+					}
+				}
+			}
+			else = {
+				add_building = building_research_lab_1
+			}
+
+			# 4-5 jobs
+			if = {
+				limit = {
+					owner = {
+						NOT = { has_valid_civic = civic_agrarian_idyll }
+					}
+				}
+				if = {
+					limit = {
+						owner = {
+							is_spiritualist = no
+							has_valid_civic = civic_pleasure_seekers
+						}
+					}
+					add_building = building_holo_theatres
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_srw_commercial
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							has_origin = origin_relic
+						}
+					}
+					add_building = building_relic_archive
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_srw_commercial
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							is_spiritualist = yes
+							has_valid_civic = civic_death_cult
+						}
+					}
+					add_building = building_sacrificial_temple_1
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_srw_commercial
+					}
+				}
+				else_if = {
+					limit = {
+						owner = {
+							is_megacorp = no
+							is_spiritualist = yes
+						}
+					}
+					add_building = building_temple
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_srw_commercial
+					}
+				}
+				else = {
+					add_building = building_commercial_zone
+				}
 			}
 		}
-
+		
 		if = {
-			limit = { owner = { is_hive_empire = yes } }
-
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_hive
+			limit = {
+				owner = { is_hive_empire = yes }
 			}
+
+			# 9 jobs
+			while = {
+				count = 3
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_hive
+				}
+			}
+
+			# 6-9 jobs
+			if = {
+				limit = {
+					owner = { is_lithoid_empire = no }
+				}
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming_uncapped
+					}
+				}
+			}
+			else = {
+				while = {
+					count = 2
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining_uncapped
+					}
+				}
+			}
+
+			# 6 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining_uncapped
+				}
+			}
+
+			# 6 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator_uncapped
+				}
+			}
+
+			# 2 jobs
 			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_industrial
+				district = district_mining_uncapped
 			}
 
 			# 5 jobs
 			add_building = building_hive_capital
 
 			# 2 jobs
-			add_building = building_hive_node
+			add_building = building_research_lab_1
 
 			# 2 jobs
-			add_building = building_research_lab_1
+			add_building = building_hive_node
 
 			# 1 job
 			add_building = building_spawning_pool
-
-			# 1 job
-			add_building = building_hive_warren
 		}
 
 		# Replace capital building for machine empires
 		if = {
 			limit = { owner = { is_machine_empire = yes } }
-			remove_district = district_rw_farming
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_generator
+
+			# total - 27 jobs
+
+			# 3 jobs
+			while = {
+				count = 2
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_nexus
+				}
 			}
+
+			# 2 jobs
 			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_nexus
-			}
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_rw_industrial
+				district = district_mining_uncapped
 			}
 
 			# 6 jobs
 			add_building = building_machine_capital
+
+			# 1 job
+			add_building = building_machine_assembly_plant
 
 			# 2 job
 			add_building = building_uplink_node
@@ -568,83 +950,60 @@ generate_start_buildings_and_districts = {
 			# 2 jobs
 			add_building = building_research_lab_1
 
+			# 4 jobs
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_mining_uncapped
+			}
+
+			# 8 jobs
+			while = {
+				count = 4
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_generator_uncapped
+				}
+			}
+
 			#Assimilators
 			if = {
 				limit = { owner = { has_civic = civic_machine_assimilator } }
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_rw_farming
+				remove_district = district_generator_uncapped
+				if = {
+					limit = { owner = { has_country_flag = lithoid_subspecies } }
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining_uncapped
+					}
 				}
-				add_deposit = d_segment_rubble_1
-				add_deposit = d_segment_rubble_2
+				else = {
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming_uncapped
+					}
+				}
 			}
 
 			#Servitors
 			if = {
 				limit = { owner = { has_civic = civic_machine_servitor } }
-				add_building = building_organic_sanctuary
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_rw_farming
+				if = {
+					limit = { owner = { has_country_flag = lithoid_subspecies } }
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_mining_uncapped
+					}
 				}
-				add_deposit = d_segment_rubble_1
-				add_deposit = d_segment_rubble_2
+				else = {
+					add_district_and_planet_size_if_needed_effect = {
+						district = district_farming_uncapped
+					}
+				}
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_nexus
+				}
+				add_building = building_organic_sanctuary
 			}
 		}
-
-		# blockers to reduce effectiveness of the city and industrial segments
-		add_deposit = d_segment_rubble_3
-		add_deposit = d_segment_rubble_4
-
 	}
 
 	# Additional resources based on empire type and possible subspecies
 	owner = {
-		if = {
-			limit = {
-				has_authority = auth_machine_intelligence
-			}
-			if = {
-				limit = {
-					OR = {
-						has_valid_civic = civic_machine_servitor
-						has_valid_civic = civic_machine_assimilator
-					}
-				}
-				if = {
-					limit = { has_country_flag = lithoid_subspecies }
-					add_resource = { minerals = 100	}
-					add_resource = { energy = 100 }
-				}
-				else = {
-					add_resource = { food = 100	}
-					add_resource = { energy = 100 }
-				}
-			}
-			else = {
-				add_resource = { energy = 200 }
-			}
-		}
-		else = {
-			if = {
-				limit = { is_lithoid_empire = no }
-				if = {
-					limit = { has_country_flag = lithoid_subspecies }
-					add_resource = { food = 100	}
-					add_resource = { minerals = 100 }
-				}
-				else = {
-					add_resource = { food = 200 }
-				}
-			}
-			else = {
-				if = {
-					limit = { has_country_flag = non_lithoid_subspecies }
-					add_resource = { food = 100	}
-					add_resource = { minerals = 100 }
-				}
-				else = {
-					add_resource = { minerals = 200 }
-				}
-			}
-		}
+		give_starting_resources_effect = yes
 	}
 }
