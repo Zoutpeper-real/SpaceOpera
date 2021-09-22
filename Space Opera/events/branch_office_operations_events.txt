@@ -1,0 +1,560 @@
+# Written by: monatomic
+
+namespace = operation
+
+# Number of days before a single event should (ideally) stand a chance of coming up again.
+@RandomOperationEventTimer = 600
+@RandomOperationEventTimerLong = 1000
+
+
+# Acquire Branch office Stage 1
+espionage_operation_event = {
+    id = operation.62000
+    title = operation.62000.name
+    desc = operation.62000.desc
+    picture = {
+        trigger = {
+            target = {
+                is_hive_empire = no
+                is_machine_empire = no
+            }
+        }
+        picture = GFX_evt_spy_network
+    }
+    show_sound = event_default
+    espionage_operation = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                target = { has_country_flag = target_of_operation_acquire_branch_office }
+            }
+            set_espionage_operation_progress_locked = yes
+            target = { save_event_target_as = target_country }
+            espionage_operation_event = { id = operation.62007 }
+        }
+    }
+
+    option = {
+        name = ACKNOWLEDGED
+    }
+}
+
+### Acquire branch offices stage 2
+espionage_operation_event = {
+    id = operation.62001
+    title = operation.62001.name
+    desc = {
+        text = operation.62001.1.desc
+        trigger = {
+            target = {
+                is_hive_empire = no
+                is_machine_empire = no
+            }
+        }
+    }
+    picture = {
+        trigger = {
+            target = {
+                is_hive_empire = no
+                is_machine_empire = no
+            }
+        }
+        picture = GFX_evt_smugglers_in_bar
+    }
+    show_sound = event_default
+    espionage_operation = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                target = { has_country_flag = target_of_operation_acquire_branch_office }
+            }
+            set_espionage_operation_progress_locked = yes
+            target = { save_event_target_as = target_country }
+            espionage_operation_event = { id = operation.62007 }
+        }
+    }
+
+    option = {
+        name = ACKNOWLEDGED
+    }
+}
+
+### Acquire branch office stage 3
+espionage_operation_event = {
+    id = operation.62002
+    title = operation.62002.name
+    desc = operation.62002.desc
+    picture = GFX_evt_gunrunning
+    show_sound = event_inhabited_solar_system
+    espionage_operation = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                target = { has_country_flag = target_of_operation_acquire_branch_office }
+            }
+            set_espionage_operation_progress_locked = yes
+            target = { save_event_target_as = target_country }
+            espionage_operation_event = { id = operation.62007 }
+        }
+    }
+
+    option = {
+        name = LAUNCH_OPERATION
+        if = {
+            limit = {
+                target = {
+                    NOT = { has_country_flag = target_of_operation_acquire_branch_office }
+                }
+            }
+            spynetwork = { add_spy_network_level = -60 }
+            hidden_effect = {
+                owner = {
+                    country_event = { id = operation.62004 }
+                }
+            }
+        }
+    }
+}
+
+### Acquire branch office - Intermediate setup (necessary?)
+country_event = {
+    id = operation.62004
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from.target
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                from.target = {
+                    NOT = { has_country_flag = target_of_operation_acquire_branch_office }
+                }
+            }
+
+            if = {
+                limit = { from.owner = { has_valid_civic = civic_criminal_heritage } }
+           
+                random_country = {
+                    limit = {
+                        NOT = { is_in_federation_with = from.owner }
+                        any_planet_within_border = { has_branch_office = from.target }
+                    }
+                    random_planet_within_border = {
+                        limit = { has_branch_office = from.target }
+                        close_branch_office = yes
+                        establish_branch_office = from.owner
+                        save_event_target_as = target_planet
+                    }
+                }
+            }
+            else = {
+                random_country = {
+                    limit = {
+                        OR = {
+                            is_in_federation_with = from.owner
+                            has_commercial_pact = from.owner
+                        }
+                        any_planet_within_border = { has_branch_office = from.target }
+                    }
+                    random_planet_within_border = {
+                        limit = { has_branch_office = from.target }
+                        close_branch_office = yes
+                        establish_branch_office = from.owner
+                        save_event_target_as = target_planet
+                    }
+                }
+            }
+
+            country_event = { id = operation.62005 } #Conclusion (instigator)
+            from.target = {
+                country_event = { id = operation.62006 } #Conclusion (victim)
+                set_timed_country_flag = {
+                    flag = target_of_operation_acquire_branch_office
+                    days = 1080 #If changed, update string 'operation_arm_privateers_existing_activity'
+                }
+            }
+        }
+        else = {
+            from = {
+                espionage_operation_event = { id = operation.62007 } #acquisition in progress; operation aborts
+            }
+        }
+    }
+}
+
+
+### Acquire branch office - Conclusion (Instigator)
+country_event = {
+    id = operation.62005
+    title = operation.62005.name
+    desc = {
+        text = operation.62005.desc
+    }
+    picture = GFX_evt_pirates_attacking_cargo
+    show_sound = event_space_battle
+    location = event_target:target_planet
+
+    is_triggered_only = yes
+
+    immediate = {
+        #Notify anyone else attempting Acquire Branch Office on this target
+        if = {
+            limit = {
+                any_playable_country = {
+                    count_espionage_operation = {
+                        limit = {
+                            has_espionage_type = operation_acquire_branch_office
+                            target = { is_same_value = from.target } # event_target:target_country }
+                        }
+                        count >= 1
+                    }
+                }
+            }
+            every_playable_country = {
+                limit = {
+                    count_espionage_operation = {
+                        limit = {
+                            has_espionage_type = operation_acquire_branch_office
+                            target = { is_same_value = from.target } # event_target:target_country }
+                        }
+                        count >= 1
+                    }
+                }
+                random_espionage_operation = {
+                    limit = {
+                        has_espionage_type = operation_acquire_branch_office
+                        target = { is_same_value = from.target } #event_target:target_country } #Redundant only so long as operations are limited to one at a time
+                    }
+                    espionage_operation_event = { id = operation.62007 days = 2 } #acquisition already at large
+                }
+            }
+        }
+    }
+
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_acquire_branch_office } }
+                }
+                owner = {
+                    set_country_flag = operation_complete_acquire_branch_office
+                }
+            }
+        }
+        destroy_espionage_operation = fromfrom
+    }
+}
+
+
+### acquire branch office - Conclusion (Victim)
+country_event = {
+    id = operation.62006
+    title = operation.62006.name
+    desc = {
+        text = operation.62006.desc
+        trigger = {
+            is_hive_empire = no
+            is_machine_empire = no
+        }
+    }
+    picture = GFX_evt_pirates_attacking_cargo
+    show_sound = event_space_battle
+    location = event_target:target_planet
+
+    is_triggered_only = yes
+
+    option = {
+        name = operation.62006.a
+    }
+}
+
+### acquire branch office - acquisition already at large
+espionage_operation_event = {
+    id = operation.62007
+    title = operation.62007.name
+    desc = {
+        text = operation.62007.1.desc
+        trigger = {
+            owner = { is_gestalt = no }
+        }
+    }
+    desc = {
+        text = operation.62007.2.desc
+        trigger = {
+            owner = { is_gestalt = no }
+        }
+    }
+    picture = GFX_evt_ground_combat
+    show_sound = event_ground_battle
+    location = event_target:target_planet
+
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+        destroy_espionage_operation = root
+    }
+}
+
+
+# Destroy branch office - stage 1
+espionage_operation_event = {
+    id = operation.62100
+    title = operation.62100.name
+    desc = {
+        text = operation.62100.desc
+    }
+    picture = GFX_evt_interior_battle
+    show_sound = event_default
+
+    is_triggered_only = yes
+    espionage_operation = yes
+    
+    immediate = {
+        if = {
+            limit = {
+                target = { has_country_flag = target_of_operation_destroy_branch_office }
+            }
+            set_espionage_operation_progress_locked = yes
+            target = { save_event_target_as = target_country }
+            espionage_operation_event = { id = operation.62107 }
+        }
+    }
+
+    option = {
+        name = ACKNOWLEDGED
+    }
+}
+
+# Destroy branch office - stage 2
+espionage_operation_event = {
+    id = operation.62101
+    title = operation.62101.name
+    desc = { text = operation.62101.desc }
+    picture = GFX_evt_interior_battle
+    show_sound = event_ground_battle
+
+    is_triggered_only = yes
+    espionage_operation = yes
+
+    immediate = {
+        if = {
+            limit = {
+                target = { has_country_flag = target_of_operation_destroy_branch_office }
+            }
+            set_espionage_operation_progress_locked = yes
+            target = { save_event_target_as = target_country }
+            espionage_operation_event = { id = operation.62107 }
+        }
+    }
+
+    option = {
+        name = LAUNCH_OPERATION
+        if = {
+            limit = {
+                target = {
+                    NOT = { has_country_flag = target_of_operation_destroy_branch_office }
+                }
+            }
+            spynetwork = { add_spy_network_level = -45 }
+            hidden_effect = {
+                owner = {
+                    country_event = { id = operation.62104 }
+                }
+            }
+        }
+    }
+}
+
+# Destroy branch office - intermediate stage
+country_event = {
+    id = operation.62104
+    title = operation.62104.name
+    desc = { text = operation.62104.desc }
+    picture = GFX_evt_interior_battle
+    show_sound = event_ground_battle
+
+    is_triggered_only = yes
+    
+    immediate = {
+        if = {
+            limit = {
+                from.target = {
+                    NOT = { has_country_flag = target_of_operation_destroy_branch_office }
+                }
+            }
+
+            if = {
+                limit = { from.target = { has_valid_civic = civic_criminal_heritage } }
+           
+                random_country = {
+                    limit = {
+                        OR = {
+                            is_in_federation_with = from.owner
+                            is_same_empire = from.owner
+                        }
+                        any_planet_within_border = { has_branch_office = from.target }
+                    }
+                    random_planet_within_border = {
+                        limit = { has_branch_office = from.target }
+                        close_branch_office = yes
+                        
+                        save_event_target_as = target_planet
+                    }
+                }
+            }
+            else = {
+                random_country = {
+                    limit = {
+                        NOT = { has_commercial_pact = from.target }
+                        OR = {
+                            is_in_federation_with = from.owner
+                            is_same_empire = from.owner
+                        }
+                        any_planet_within_border = { has_branch_office = from.target }
+                    }
+                    random_planet_within_border = {
+                        limit = { has_branch_office = from.target }
+                        close_branch_office = yes
+                        
+                        save_event_target_as = target_planet
+                    }
+                }
+            }
+
+            country_event = { id = operation.62105 } #Conclusion (instigator)
+            from.target = {
+                country_event = { id = operation.62106 } #Conclusion (victim)
+                set_timed_country_flag = {
+                    flag = target_of_operation_destroy_branch_office
+                    days = 1080 #If changed, update string 'operation_arm_privateers_existing_activity'
+                }
+            }
+        }
+        else = {
+            from = {
+                espionage_operation_event = { id = operation.62107 } #destroy in progress; operation aborts
+            }
+        }
+    }
+
+    option = {
+        name = OK
+
+    }
+}
+
+# destroy branch office - conclusion (instigator)
+country_event = {
+    id = operation.62105
+    title = operation.62105.name
+    desc = { text = operation.62105.desc }
+    picture = GFX_evt_interior_battle
+    show_sound = event_ground_battle
+
+    is_triggered_only = yes
+
+    immediate = {
+        #Notify anyone else attempting Destroy Branch Office on this target
+        if = {
+            limit = {
+                any_playable_country = {
+                    count_espionage_operation = {
+                        limit = {
+                            has_espionage_type = operation_destroy_branch_office
+                            target = { is_same_value = from.target } # event_target:target_country }
+                        }
+                        count >= 1
+                    }
+                }
+            }
+            every_playable_country = {
+                limit = {
+                    count_espionage_operation = {
+                        limit = {
+                            has_espionage_type = operation_destroy_branch_office
+                            target = { is_same_value = from.target } # event_target:target_country }
+                        }
+                        count >= 1
+                    }
+                }
+                random_espionage_operation = {
+                    limit = {
+                        has_espionage_type = operation_destroy_branch_office
+                        target = { is_same_value = from.target } #event_target:target_country } #Redundant only so long as operations are limited to one at a time
+                    }
+                    espionage_operation_event = { id = operation.62007 days = 2 } #acquisition already at large
+                }
+            }
+        }
+    }
+
+    after = {
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_destroy_branch_office } }
+                }
+                owner = {
+                    set_country_flag = operation_complete_destroy_branch_office
+                }
+            }
+        }
+        destroy_espionage_operation = fromfrom
+    }
+
+    option = {
+        name = EXCELLENT
+    }
+}
+
+# destroy branch office - conclusion (victim)
+country_event = {
+    id = operation.62106
+    title = operation.62106.name
+    desc = { text = operation.62106.desc }
+    picture = GFX_evt_interior_battle
+    show_sound = event_ground_battle
+
+    is_triggered_only = yes
+
+    immediate = {
+        # set_timed_country_flag = { flag = criminal_branch_closed_cooldown days = 3600 }
+        # event_target:target_planet = {
+        #     set_timed_planet_flag = { flag = criminal_branch_closed_cooldown_planet@event_target:from.target days = 3600 }
+        # }
+    }
+
+    option = {
+        name = UNFORTUNATE
+    }
+}
+
+
+# destroy criminal branch office - already in progress
+espionage_operation_event = {
+    id = operation.62107
+    title = operation.62107.name
+    desc = { text = operation.62107.1.desc }
+    picture = GFX_evt_interior_battle
+    show_sound = event_ground_battle
+    location = event_target:target_planet
+
+    is_triggered_only = yes
+
+    option = {
+        name = OK
+        destroy_espionage_operation = root
+    }
+}

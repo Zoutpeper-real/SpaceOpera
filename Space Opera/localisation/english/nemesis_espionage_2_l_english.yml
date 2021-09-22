@@ -1,0 +1,24 @@
+﻿l_english:
+ operation_acquire_branch_office:0 "Acquire Branch Office"
+ operation_acquire_branch_office_desc:2 "Our operatives will implant malware and infiltrate the organizational structure within the target empire, giving them the means to transfer ownership of assets to ourselves."
+ operation_acquire_branch_office_on_success:0 "$IF_SUCCESSFUL|E$\nCause a branch office owned by [root.target.GetAdj] to transfer to our control."
+ operation_acquire_branch_office_existing_activity:0 "$TRIGGER_FAIL$ §RAn acquisition is already under way in the §Y[root.target.GetName]§!. We must wait at least §Y3 years§! for another opportunity.§!"
+
+ operation_destroy_branch_office:0 "Destroy Branch Office"
+ operation_destroy_branch_office_desc:2 "Our operatives will identify the organizational structure within the target empire and dismantle the local corporate activity."
+ operation_destroy_branch_office_on_success:0 "$IF_SUCCESSFUL|E$\nCause a branch office owned by [root.target.GetAdj], located on an owned or allied planet, to be removed."
+ operation_destroy_branch_office_existing_activity:0 "$TRIGGER_FAIL$ §RAn operation is already under way in the §Y[root.target.GetName]§!. We must wait at least §Y3 years§! for another opportunity.§!"
+
+ operation.62000.name:0 "Acquire stage 1"
+ operation.62000.desc:0 "Acquire stage 1"
+ operation.62001.name:0 "Acquire stage 2"
+ operation.62001.desc:0 "Acquire stage 2"
+ operation.62002.name:0 "Acquire stage 3"
+ operation.62002.desc:0 "Acquire stage 3"
+ operation.62005.name:0 "Acquire conclusion instigator"
+ operation.62005.desc:0 "Acquire conclusion instigator"
+ operation.62006.name:0 "Acquire conclusion victim"
+ operation.62006.desc:0 "Acquire conclusion victim"
+
+ operation.62100.name:0 "Destroy stage 1"
+ operation.62100.desc:0 "Destroy stage 1"
