@@ -38,7 +38,7 @@ operation_acquire_branch_office = {
     picture = GFX_evt_pirate_armada
     desc = operation_acquire_branch_office_desc
     stages = 3
-    spy_power_cost = 60
+    spy_power_cost = 10 # TODO 60
 
     target = none #country
 
@@ -104,17 +104,17 @@ operation_acquire_branch_office = {
         }
     }
     stage = {
-        difficulty = @diff_t0  #TODO t6
+        difficulty = @diff_t0  #TODO @diff_t6
         icon = GFX_espionage_chapter_icon_surveillance
         event = operation.62000 #operation.6200
     }
     stage = {
-        difficulty = @diff_t0  #TODO t6
+        difficulty = @diff_t0  #TODO @diff_t6
         icon = GFX_espionage_chapter_icon_target
         event = operation.62001 #operation.6201
     }
     stage = {
-        difficulty = @diff_t0  #TODO t6
+        difficulty = @diff_t0  #TODO @diff_t6
         icon = GFX_espionage_chapter_icon_motion
         event = operation.62002 #operation.6202
     }
@@ -130,9 +130,9 @@ operation_acquire_branch_office = {
 operation_destroy_branch_office = {
     categories = { op_cat_sabotage op_cat_economy }
     picture = GFX_evt_pirate_armada
-    desc = operation_acquire_branch_office_desc
+    desc = operation_destroy_branch_office_desc
     stages = 2
-    spy_power_cost = 5 # TODO
+    spy_power_cost = 10 # TODO 45
 
 
     target = none # country
@@ -152,13 +152,16 @@ operation_destroy_branch_office = {
     }
     allow = {
         custom_tooltip = {
+            fail_text = operation_destroy_branch_office_existing_activity
+            target = { NOT = { has_country_flag = target_of_operation_destroy_branch_office } }
+        }
+        custom_tooltip = {
             is_running_espionage_operation = no
             fail_text = operation_one_at_a_time
         }
         target = {
-            NOR = { 
+            NOT = { 
                 is_in_federation_with = root.owner
-                has_commercial_pact = root.owner
             }
         }
         any_country = {
@@ -166,6 +169,7 @@ operation_destroy_branch_office = {
                 is_in_federation_with = root.owner
                 is_same_empire = root.owner
             }
+            NOT = { has_commercial_pact = from.target }
             any_owned_planet = {
                 has_branch_office = root.target
             }

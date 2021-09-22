@@ -46,7 +46,7 @@ espionage_operation_event = {
     id = operation.62001
     title = operation.62001.name
     desc = {
-        text = operation.62001.1.desc
+        text = operation.62001.desc
         trigger = {
             target = {
                 is_hive_empire = no
@@ -123,7 +123,7 @@ espionage_operation_event = {
     }
 }
 
-### Acquire branch office - Intermediate setup (necessary?)
+### Acquire branch office - Intermediate setup
 country_event = {
     id = operation.62004
     hide_window = yes
@@ -180,7 +180,7 @@ country_event = {
                 country_event = { id = operation.62006 } #Conclusion (victim)
                 set_timed_country_flag = {
                     flag = target_of_operation_acquire_branch_office
-                    days = 1080 #If changed, update string 'operation_arm_privateers_existing_activity'
+                    days = 1080 #If changed, update string 'operation_acquire_branch_office_existing_activity'
                 }
             }
         }
@@ -275,7 +275,7 @@ country_event = {
     is_triggered_only = yes
 
     option = {
-        name = operation.62006.a
+        name = UNFORTUNATE
     }
 }
 
@@ -284,17 +284,12 @@ espionage_operation_event = {
     id = operation.62007
     title = operation.62007.name
     desc = {
-        text = operation.62007.1.desc
+        text = operation.62007.desc
         trigger = {
             owner = { is_gestalt = no }
         }
     }
-    desc = {
-        text = operation.62007.2.desc
-        trigger = {
-            owner = { is_gestalt = no }
-        }
-    }
+
     picture = GFX_evt_ground_combat
     show_sound = event_ground_battle
     location = event_target:target_planet
@@ -380,12 +375,12 @@ espionage_operation_event = {
 # Destroy branch office - intermediate stage
 country_event = {
     id = operation.62104
-    title = operation.62104.name
-    desc = { text = operation.62104.desc }
-    picture = GFX_evt_interior_battle
-    show_sound = event_ground_battle
-
+    hide_window = yes
     is_triggered_only = yes
+
+    trigger = {
+        exists = from.target
+    }
     
     immediate = {
         if = {
@@ -438,7 +433,7 @@ country_event = {
                 country_event = { id = operation.62106 } #Conclusion (victim)
                 set_timed_country_flag = {
                     flag = target_of_operation_destroy_branch_office
-                    days = 1080 #If changed, update string 'operation_arm_privateers_existing_activity'
+                    days = 1080 #If changed, update string 'operation_destroy_branch_office_existing_activity'
                 }
             }
         }
@@ -447,11 +442,6 @@ country_event = {
                 espionage_operation_event = { id = operation.62107 } #destroy in progress; operation aborts
             }
         }
-    }
-
-    option = {
-        name = OK
-
     }
 }
 
@@ -494,7 +484,7 @@ country_event = {
                         has_espionage_type = operation_destroy_branch_office
                         target = { is_same_value = from.target } #event_target:target_country } #Redundant only so long as operations are limited to one at a time
                     }
-                    espionage_operation_event = { id = operation.62007 days = 2 } #acquisition already at large
+                    espionage_operation_event = { id = operation.62107 days = 2 } #acquisition already at large
                 }
             }
         }
@@ -546,7 +536,7 @@ country_event = {
 espionage_operation_event = {
     id = operation.62107
     title = operation.62107.name
-    desc = { text = operation.62107.1.desc }
+    desc = { text = operation.62107.desc }
     picture = GFX_evt_interior_battle
     show_sound = event_ground_battle
     location = event_target:target_planet
