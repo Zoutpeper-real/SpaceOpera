@@ -6,3 +6,5 @@
  tr_diplomacy_finish:0 "Diplomacy Traditions Finished"
  tr_diplomacy_finish_desc:1 "Allows you to immediately research the technology §GFederations§! without having to wait for the option.\n§HAvailable Envoys§! §G+1§!."
  
+ tr_mercantile_commercial_enterprise_desc:0 "£building£ §YCommerce Megaplexes§! buildings provide §Y1§! £job_merchant£ §YMerchant Job§!.\nRing World §YCommercial Segments§! and Habitat §YTrade Districts§! do likewise."
+ 

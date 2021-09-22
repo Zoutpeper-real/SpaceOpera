@@ -299,12 +299,21 @@ trade_federation = {
 	potential = {
 		host_has_dlc = Federations
 	}
+
 	allow = {
 		custom_tooltip = {
-			fail_text = requires_megacorp_or_merchant
+			fail_text = "form_federation_requires_trade"
 			OR = {
 				is_megacorp = yes
 				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_corporate_dominion
+			}
+			from = {
+				OR = {
+					is_megacorp = yes
+					has_valid_civic = civic_merchant_guilds				
+					has_valid_civic = civic_corporate_dominion
+				}
 			}
 		}
 		custom_tooltip = {
@@ -582,9 +591,23 @@ research_federation = {
 		host_has_dlc = Federations
 	}
 	allow = {
-		OR = {
-			is_materialist = yes
-			is_machine_empire = yes
+		custom_tooltip = {
+			fail_text = "form_federation_requires_materialist"
+			OR = {
+				has_ethic = ethic_materialist 
+				has_ethic = ethic_fanatic_materialist 
+				has_authority = auth_machine_intelligence 
+				has_valid_civic = civic_hive_natural_neural_network 
+			}
+
+			from = { 
+				OR = {
+					has_ethic = ethic_materialist 
+					has_ethic = ethic_fanatic_materialist 
+					has_authority = auth_machine_intelligence 
+					has_valid_civic = civic_hive_natural_neural_network 
+				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = requires_actor_not_barbaric_despoilers
@@ -852,7 +875,25 @@ military_federation = {
 		host_has_dlc = Federations
 	}
 	allow = {
-		is_militarist = yes
+		custom_tooltip = {
+			fail_text = "form_federation_requires_militarist"
+			OR = { 
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist 
+				has_valid_civic = civic_machine_warbots 
+				has_valid_civic = civic_hive_strength_of_legions 
+				has_valid_civic = civic_hive_subspace_ephapse 
+			}
+			from = {
+				OR = { 
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist 
+					has_valid_civic = civic_machine_warbots 
+					has_valid_civic = civic_hive_strength_of_legions 
+					has_valid_civic = civic_hive_subspace_ephapse 
+				}
+			}
+		}
 	}
 	levels = {
 		level_1 = { # Starting rank
@@ -1116,6 +1157,7 @@ hegemony_federation = {
 	}
 	allow = {
 		OR = {
+			has_civic = civic_hive_subsumed_will
 			has_civic = civic_machine_servitor
 			is_authoritarian = yes
 		}

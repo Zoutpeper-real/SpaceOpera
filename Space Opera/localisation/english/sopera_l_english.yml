@@ -17,6 +17,9 @@
  federation_requires_trade:2 "$TRIGGER_FAIL$§RRequires recipient to be a §YMegacorporation§R, or have the §YMerchant Guilds§R civic.§!"
  federation_size_limit_fail:2 "$TRIGGER_FAIL$§RThe Federation cannot handle any more members.§!"
  
+ form_federation_requires_materialist:2 "$TRIGGER_FAIL$§RRequires both you and the recipient to be some form of §YMaterialst§R, §YMachine Intelligence§R or §YHive Mind§R with the §YNatural Neural Network§R civic.§!"
+ form_federation_requires_militarist:2 "$TRIGGER_FAIL$§RRequires both you and the recipient to be some form of §YMilitarist§R, or be a §YGestalt§R with the §YWarbots§R, §YStrength of Legions§R or §YSubspace Ephapse§R civic.§!"
+ form_federation_requires_trade:2 "$TRIGGER_FAIL$§RRequires both you and the recipient to be either a §YMegacorporation§R, or have the §YMerchant Guilds§R civic.§!"
  
  requires_test:2 "$TRIGGER_FAIL$§RTest Failure.§!"
  
