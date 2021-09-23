@@ -254,6 +254,8 @@ action_invite_to_federation = {
 	}
 }
 
+# Ask to join an existing federation. Requires unanimous vote from the federation.
+# Usable by regular empires only. Raises trust over time.
 action_ask_to_join_federation = {
 	icon = "GFX_diplomacy_status_federation"
 	requires_actor_peace = yes
@@ -264,7 +266,10 @@ action_ask_to_join_federation = {
 	action_type = positive
 
 	potential = {
-		always = no
+		hidden_trigger = {
+			is_fallen_machine_empire = no
+			from = { is_fallen_machine_empire = no }
+		}
 	}
 
 	possible = {
@@ -359,6 +364,178 @@ action_ask_to_join_federation = {
 				is_improving_relations_with = from
 			}
 		}
+		
+		
+		if = {
+			limit = {
+				NOR = {
+					from = { federation = { NOT = { has_federation_type = research_federation } } }
+					has_ethic = ethic_materialist 
+					has_ethic = ethic_fanatic_materialist 
+					has_authority = auth_machine_intelligence 
+					has_valid_civic = civic_hive_natural_neural_network 
+				}
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = "join_federation_requires_materialist"
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = "federation_action_no_low_intel"
+					always = no
+				}
+			}
+		}
+		
+		#custom_tooltip = {
+		#	fail_text = "join_federation_requires_materialist"
+		#	OR = {
+		#		from = { federation = { NOT = { has_federation_type = research_federation } } }
+		#		has_ethic = ethic_materialist 
+		#		has_ethic = ethic_fanatic_materialist 
+		#		has_authority = auth_machine_intelligence 
+		#		has_valid_civic = civic_hive_natural_neural_network 
+		#	}
+		#}
+		
+		if = {
+			limit = {
+				NOR = {
+					from = { federation = { NOT = { has_federation_type = military_federation } } }
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_valid_civic = civic_machine_warbots
+					has_valid_civic = civic_hive_strength_of_legions
+					has_valid_civic = civic_hive_subspace_ephapse
+				}
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = "join_federation_requires_militarist"
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = "federation_action_no_low_intel"
+					always = no
+				}
+			}
+		}
+		
+		#custom_tooltip = {
+		#	fail_text = "join_federation_requires_militarist"
+		#	OR = {
+		#		from = { federation = { NOT = { has_federation_type = military_federation } } }
+		#		has_ethic = ethic_militarist
+		#		has_ethic = ethic_fanatic_militarist
+		#		has_valid_civic = civic_machine_warbots
+		#		has_valid_civic = civic_hive_strength_of_legions
+		#		has_valid_civic = civic_hive_subspace_ephapse
+		#	}
+		#}
+		
+		if = {
+			limit = {
+				NOR = {
+					from = { federation = { NOT = { has_federation_type = trade_federation } } }
+					has_valid_civic = civic_corporate_dominion
+					has_valid_civic = civic_merchant_guilds
+					has_authority = auth_corporate
+				}
+			}
+			if = {
+				limit = {
+					has_intel = {
+						who = from
+						intel = civics
+					}
+				}
+				custom_tooltip = {
+					fail_text = "join_federation_requires_trade"
+					always = no
+				}
+			}
+			else = {
+				custom_tooltip = {
+					fail_text = "federation_action_no_low_intel"
+					always = no
+				}
+			}
+		}
+		
+		
+		#custom_tooltip = {
+		#	fail_text = "join_federation_requires_trade"
+		#	OR = {
+		#		from = { federation = { NOT = { has_federation_type = trade_federation } } }
+		#		has_valid_civic = civic_corporate_dominion
+		#		has_valid_civic = civic_merchant_guilds
+		#		has_authority = auth_corporate
+		#	}
+		#}
+		
+		custom_tooltip =  {
+			fail_text = "federation_size_limit_fail"
+			from = {
+				federation = {
+					OR = {
+						AND = {
+							num_members < 3
+							federation_level < 3
+						}
+						AND = {
+							num_members < 4
+							federation_level < 3
+							has_federation_type = hegemony_federation
+						}
+						AND = {
+							num_members < 4
+							federation_level = 3
+						}
+						AND = {
+							num_members < 5
+							federation_level = 3
+							has_federation_type = hegemony_federation
+						}
+						AND = {
+							num_members < 5
+							federation_level = 4
+						}
+						AND = {
+							num_members < 6
+							federation_level = 4
+							has_federation_type = hegemony_federation
+						}
+						AND = {
+							num_members < 8
+							federation_level = 5
+						}
+						AND = {
+							num_members < 9
+							federation_level = 5
+							has_federation_type = hegemony_federation
+						}
+					}
+				}
+			}
+		}
+		
 		custom_tooltip = {
 			fail_text = requires_actor_to_be_federation_leader
 			from = {
