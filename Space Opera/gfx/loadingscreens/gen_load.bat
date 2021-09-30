@@ -13,5 +13,4 @@ COPY /B "load_1.dds" "load_13.dds"
 COPY /B "load_1.dds" "load_14.dds"
 COPY /B "load_1.dds" "load_15.dds"
 COPY /B "load_1.dds" "load_16.dds"
-COPY /B "load_1.dds" "load_17.dds"
 pause
