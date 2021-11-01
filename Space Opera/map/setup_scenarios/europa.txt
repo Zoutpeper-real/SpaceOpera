@@ -47,7 +47,7 @@ setup_scenario = {
 	}
 
 	num_nebulas	= 10
-	nebula_size = 100
+	nebula_size = 120
 	nebula_min_dist = 200
 	
 	num_wormhole_pairs = { min = 0 max = 20 }

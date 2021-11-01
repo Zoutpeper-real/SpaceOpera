@@ -13,8 +13,8 @@ ap_become_the_crisis = {
 	possible = {
 	### Sopera Addition
 		custom_tooltip = {
-			fail_text = "requires_midgame_reached"
-			mid_game_years_passed > 0
+			fail_text = "requires_endgame_reached"
+			end_game_years_passed >= 0
 		}
 	###
 		custom_tooltip = {

@@ -1,7 +1,7 @@
-@stage_1_research_bonus	= 100
-@stage_2_research_bonus	= 200
-@stage_3_research_bonus	= 300
-@stage_4_research_bonus	= 350
+@stage_1_research_bonus	= 50
+@stage_2_research_bonus	= 150
+@stage_3_research_bonus	= 400
+@stage_4_research_bonus	= 450
 @entity_x				= 0
 @entity_y 				= -20
 

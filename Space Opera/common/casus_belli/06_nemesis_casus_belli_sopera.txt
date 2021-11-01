@@ -1,0 +1,52 @@
+#my_casus_belli = {
+#	potential = { ... }		# trigger to make some CBs invalid for certain types of countries; this = attacker (CB owner); default: { always = yes }
+#	is_valid = { ... }		# trigger, evaluated daily to check if CB should be created or destroyed automatically, does not affect CBs granted via script;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = yes }
+#	destroy_if = { ... }	# trigger, evaluated daily to destroy CBs that have been granted via script ahead of expiration date;
+#								# this = attacker (CB owner), from = defender (target country); default: { always = no }
+#	show_notification = no/yes	# optional (default = yes), flag to control whether this CB will generate a notification (to avoid duplicate
+#								# notification when a claim CB is generated)
+#}
+
+### No longer in use due to removal of Crisis Paths
+### cb_path_destruction = {
+###	show_in_diplomacy = yes
+###	show_notification = yes
+###	potential = {
+###		has_country_flag = crisis_path_of_destruction
+###	}
+###	is_valid = {
+###		always = yes
+###	}
+### }
+
+cb_imposed_inclusion = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		has_ascension_perk = ap_become_the_crisis
+		is_homicidal = no
+		OR = {
+			has_crisis_level = crisis_level_4
+			has_crisis_level = crisis_level_5
+		}
+	}
+	is_valid = {
+		always = yes
+	}
+}
+
+cb_existential_expulsion = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		has_ascension_perk = ap_become_the_crisis
+		OR = {
+			has_crisis_level = crisis_level_4
+			has_crisis_level = crisis_level_5
+		}
+	}
+	is_valid = {
+		always = yes
+	}
+}

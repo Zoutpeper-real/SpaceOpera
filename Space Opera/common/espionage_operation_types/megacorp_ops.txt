@@ -38,7 +38,7 @@ operation_acquire_branch_office = {
     picture = GFX_evt_pirate_armada
     desc = operation_acquire_branch_office_desc
     stages = 3
-    spy_power_cost = 60
+    spy_power_cost = 10 # TODO 60
 
     target = none #country
 
@@ -104,17 +104,17 @@ operation_acquire_branch_office = {
         }
     }
     stage = {
-        difficulty = @diff_t5
+        difficulty = @diff_t0  #TODO @diff_t6
         icon = GFX_espionage_chapter_icon_surveillance
         event = operation.62000 #operation.6200
     }
     stage = {
-        difficulty = @diff_t5
+        difficulty = @diff_t0  #TODO @diff_t6
         icon = GFX_espionage_chapter_icon_target
         event = operation.62001 #operation.6201
     }
     stage = {
-        difficulty = @diff_t5
+        difficulty = @diff_t0  #TODO @diff_t6
         icon = GFX_espionage_chapter_icon_motion
         event = operation.62002 #operation.6202
     }
@@ -132,7 +132,7 @@ operation_destroy_branch_office = {
     picture = GFX_evt_pirate_armada
     desc = operation_destroy_branch_office_desc
     stages = 2
-    spy_power_cost = 45
+    spy_power_cost = 10 # TODO 45
 
 
     target = none # country
@@ -189,12 +189,12 @@ operation_destroy_branch_office = {
     # }
     
     stage = {
-        difficulty = @diff_t4 #@diff_t4
+        difficulty = @diff_t0 #@diff_t4
         icon = GFX_espionage_chapter_icon_surveillance
         event = operation.62100
     }
     stage = {
-        difficulty = @diff_t4 #@diff_t4
+        difficulty = @diff_t0 #@diff_t4
         icon = GFX_espionage_chapter_icon_motion
         event = operation.62101
     }
