@@ -1,0 +1,1201 @@
+@getCost = 1000
+get_relic_dragon_trophy = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_dragon_trophy = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_dragon_trophy
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_dragon_trophy
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_dragon_trophy = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_dragon_trophy
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_dragon_trophy
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_dragon_trophy
+		add_resource = {
+			token_dragon_trophy = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_khans_throne = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_khans_throne = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_khans_throne
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_khans_throne
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_khans_throne = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_khans_throne
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_khans_throne
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_khans_throne
+		add_resource = {
+			token_khans_throne = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_worm_scales = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_worm_scales = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_worm_scales
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_worm_scales
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_worm_scales = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_worm_scales
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_worm_scales
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_worm_scales
+		add_resource = {
+			token_worm_scales = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_rubricator = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_rubricator = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_rubricator
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_rubricator
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_rubricator = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_rubricator
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_rubricator
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_rubricator
+		add_resource = {
+			token_rubricator = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_galaxy = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_galaxy = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_galaxy
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_galaxy
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_galaxy = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_galaxy
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_galaxy
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_galaxy
+		add_resource = {
+			token_galaxy = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_omnicodex = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_omnicodex = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_omnicodex
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_omnicodex
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_omnicodex = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_omnicodex
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_omnicodex
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_omnicodex
+		add_resource = {
+			token_omnicodex = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_surveyor = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_surveyor = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_surveyor
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_surveyor
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_surveyor = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_surveyor
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_surveyor
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_surveyor
+		add_resource = {
+			token_surveyor = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_galatron = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_galatron = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_galatron
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_galatron
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_galatron = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_galatron
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_galatron
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_galatron
+		add_resource = {
+			token_galatron = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_ancient_sword = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_ancient_sword = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_ancient_sword
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_ancient_sword
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_ancient_sword = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_ancient_sword
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_ancient_sword
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_ancient_sword
+		add_resource = {
+			token_ancient_sword = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_severed_head = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_severed_head = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_severed_head
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_severed_head
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_severed_head = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_severed_head
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_severed_head
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_severed_head
+		add_resource = {
+			token_severed_head = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_prethoryn_queen = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_prethoryn_queen = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_prethoryn_queen
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_prethoryn_queen
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_prethoryn_queen = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_prethoryn_queen
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_prethoryn_queen
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_prethoryn_queen
+		add_resource = {
+			token_prethoryn_queen = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_unbidden_warlock = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_unbidden_warlock = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_unbidden_warlock
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_unbidden_warlock
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_unbidden_warlock = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_unbidden_warlock
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_unbidden_warlock
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_unbidden_warlock
+		add_resource = {
+			token_unbidden_warlock = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_contingency_core = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_contingency_core = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_contingency_core
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_contingency_core
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_contingency_core = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_contingency_core
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_contingency_core
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_contingency_core
+		add_resource = {
+			token_contingency_core = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_zro_crystal = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_zro_crystal = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_zro_crystal
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_zro_crystal
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_zro_crystal = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_zro_crystal
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_zro_crystal
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_zro_crystal
+		add_resource = {
+			token_zro_crystal = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_the_last_baol = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_the_last_baol = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_the_last_baol
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_the_last_baol
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_the_last_baol = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_the_last_baol
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_the_last_baol
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_the_last_baol
+		add_resource = {
+			token_the_last_baol = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_the_defragmentor = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_the_defragmentor = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_the_defragmentor
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_the_defragmentor
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_the_defragmentor = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_the_defragmentor
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_the_defragmentor
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_the_defragmentor
+		add_resource = {
+			token_the_defragmentor = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_reality_perforator = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_reality_perforator = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_reality_perforator
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_reality_perforator
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_reality_perforator = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_reality_perforator
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_reality_perforator
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_reality_perforator
+		add_resource = {
+			token_reality_perforator = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_pox_sample = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_pox_sample = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_pox_sample
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_pox_sample
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_pox_sample = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_pox_sample
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_pox_sample
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_pox_sample
+		add_resource = {
+			token_pox_sample = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_cryo_core = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_cryo_core = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_cryo_core
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_cryo_core
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_cryo_core = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_cryo_core
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_cryo_core
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_cryo_core
+		add_resource = {
+			token_cryo_core = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+get_relic_war_forge = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	resources = {
+		category = decisions
+		cost = {
+			token_war_forge = @getCost
+		}
+	}
+	potential = {
+		has_country_resource = {
+			type = token_war_forge
+			amount >= @getCost
+		}
+	}
+	effect = {
+		add_relic = r_war_forge
+	}
+	ai_weight = {
+		weight = 100
+	}
+}
+get_tokens_war_forge = {
+	icon = GFX_resource_minor_artifacts
+	length = 0
+	edict_cap_usage = 0
+	potential = {
+		has_relic = r_war_forge
+	}
+	allow = {
+		NAND = {
+			last_activated_relic = r_war_forge
+			has_modifier = relic_activation_cooldown	
+		}
+		NAND = {
+			is_at_war = yes
+			any_war = {
+				any_war_participant = {
+					is_at_war_with = from
+					prev = {
+						using_war_goal = {
+							type = wg_plunder_one_relic
+							owner = prev
+						}
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		remove_relic = r_war_forge
+		add_resource = {
+			token_war_forge = @getCost
+		}
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

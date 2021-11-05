@@ -1,19 +1,17 @@
 ﻿l_english:
-casus_belli_cb_plunder_relic:0 "Relic"
-war_goal_wg_plunder_all_relics:0 "Plunder ALL Relics"
-war_goal_wg_plunder_all_relics_desc:0 "Plunder all relics from the enemy regime. Using this war goal may cause severe diplomatic consequences."
-war_goal_wg_plunder_one_relic:0 "Plunder Relic"
-war_goal_wg_plunder_one_relic_desc:0 "Use this war goal to plunder a relic from the enemy regime. If the enemy has several relics, only one will be randomly selected and transmitted to our capital."
+casus_belli_cb_plunder_relic:0 "Steal Relic"
+war_goal_wg_plunder_one_relic:0 "Steal Relic"
+war_goal_wg_plunder_one_relic_desc:0 "Use this war goal to steal a relic from the enemy regime. If the enemy has several relics, only one will be randomly selected and transmitted to our capital."
 ################ EVENTS ######################
 relic_wars.1.name:0 "Seizing A Relic"
-relic_wars.1.desc:0 "[From.From.GetName] has admitted defeat. The relic has been safely transmitted to our capital. As our archaeologist hoped, this relic finally returned its home."
+relic_wars.1.desc:0 "[From.From.GetName] has admitted defeat. The relic has been safely transmitted to our capital. As our archaeologist hoped, this relic finally returned to its home."
 relic_wars.1.a:0 "Yes, it's ours."
 
 relic_wars.2.name:0 "Price for the failure"
 relic_wars.2.desc:0 "The war is over! We have to admit the failure. As a price, a relic of ours will be transmit to [From.GetName]. Reporters claimed this as a shameful lost."
 relic_wars.2.a:0 "They will pay for this."
 
-relic_wars.3.name:0 "Plunder the Treasury"
+relic_wars.3.name:0 "Steal the Treasury"
 relic_wars.3.desc:0 "[From.From.GetName] has been completely defeated. All their people are at our mercy. But as a civilized interstellar nation, we will not enjoy meaningless killing. Instead, take all their relics could be a matchless honor for our warriors."
 relic_wars.3.a:0 "HAHAHA, take them all!"
 
