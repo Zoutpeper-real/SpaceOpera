@@ -233,7 +233,11 @@ action_invite_to_federation = {
 		custom_tooltip = {
 			fail_text = "requires_embassy_with_nation"
 
-			has_embassy = from
+			OR = {
+				NOT = { is_country_type = default }
+				NOT = { from = { is_country_type = default } }
+				has_embassy = from
+			}
 		}
 		
 		# Members of the Galactic Empire can't be in federations
@@ -354,8 +358,12 @@ action_ask_to_join_federation = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_embassy_with_nation"
-
-			has_embassy = from
+			
+			OR = {
+				NOT = { is_country_type = default }
+				NOT = { from = { is_country_type = default } }
+				has_embassy = from
+			}
 		}
 		
 		

@@ -1,5 +1,8 @@
 # Creates a migration treaty that allows pops to move freely between two empires. Only possible if both empires have suitable worlds for each others' pops.
 # Usable by regular empires only. Raises trust over time.
+
+@cb_subjugation_length = 360
+
 action_form_migration_pact = {
 	icon = "GFX_diplomacy_status_migration_pact"
 	diplo_view_acceptance_icon = yes
@@ -117,8 +120,12 @@ action_form_migration_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_embassy_with_nation"
-
-			has_embassy = from
+			
+			OR = {
+				NOT = { is_country_type = default }
+				NOT = { from = { is_country_type = default } }
+				has_embassy = from
+			}
 		}
 	}
 }
@@ -261,7 +268,11 @@ action_form_research_agreement = {
 		custom_tooltip = {
 			fail_text = "requires_embassy_with_nation"
 
-			has_embassy = from
+			OR = {
+				NOT = { is_country_type = default }
+				NOT = { from = { is_country_type = default } }
+				has_embassy = from
+			}
 		}
 	}
 }
@@ -390,8 +401,12 @@ action_form_commercial_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_embassy_with_nation"
-
-			has_embassy = from
+			
+			OR = {
+				NOT = { is_country_type = default }
+				NOT = { from = { is_country_type = default } }
+				has_embassy = from
+			}
 		}
 	}
 }
@@ -487,7 +502,11 @@ action_form_defensive_pact = {
 		custom_tooltip = {
 			fail_text = "requires_embassy_with_nation"
 
-			has_embassy = from
+			OR = {
+				NOT = { is_country_type = default }
+				NOT = { from = { is_country_type = default } }
+				has_embassy = from
+			}
 		}
 	}
 }
