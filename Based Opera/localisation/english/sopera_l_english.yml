@@ -1,0 +1,27 @@
+﻿l_english:
+ requires_technology_the_federation:2 "$TRIGGER_FAIL$§RRequires the §GFederations§! technology.§!"
+ 
+ tech_form_federations:0 "Federations"
+ tech_form_federations_desc:0 "We must build stable and lasting partnerships with our neighbors, based on trust and mutual respect. Together we are far stronger than we could ever hope to be alone."
+ 
+
+ tech_form_federations_partial_custom:0 "$TECH_UNLOCK_DIPLOMATIC_ACTION_CREATE_FEDERATION_TITLE$\n§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§!"
+ tech_form_federations_partial_custom_desc:0 "Allows you to form a federation with other empires depending on your and their ethics and civics."
+
+ tr_versatility_universal_compatibility_desc:1 "§Y$MOD_COUNTRY_TRUST_CAP_ADD$§! increases by §G+50§! and £opinion£ §YOpinion§! increased by §G+20§!, but only with fellow $auth_machine_intelligence$ empires.\n§Y$MOD_COUNTRY_ENVOYS_ADD$§! are increased by §G1§!."
+ disabled_for_sopera:2 "§ROnly A §YHegemon Federation§R can have subjects join their federation.§!"
+ requires_endgame_reached:2 "$TRIGGER_FAIL$§!Endgame has not been reached yet.§!"
+   
+ federation_requires_materialist:2 "$TRIGGER_FAIL$§RRequires recipient to be some form of §YMaterialst§R, §YMachine Intelligence§R or §YHive Mind§R with the §YNatural Neural Network§R civic.§!"
+ federation_requires_militarist:2 "$TRIGGER_FAIL$§RRequires recipient to be some form of §YMilitarist§R or §YGestalt§R with the §YWarbots§R, §YStrength of Legions§R or §YSubspace Ephapse§R civic.§!"
+ federation_requires_trade:2 "$TRIGGER_FAIL$§RRequires recipient to be a §YMegacorporation§R, or have the §YMerchant Guilds§R civic.§!"
+ federation_size_limit_fail:2 "$TRIGGER_FAIL$§RThe Federation cannot handle any more members.§!"
+ 
+ form_federation_requires_materialist:2 "$TRIGGER_FAIL$§RRequires both you and the recipient to be some form of §YMaterialst§R, §YMachine Intelligence§R or §YHive Mind§R with the §YNatural Neural Network§R civic.§!"
+ form_federation_requires_militarist:2 "$TRIGGER_FAIL$§RRequires both you and the recipient to be some form of §YMilitarist§R, or be a §YGestalt§R with the §YWarbots§R, §YStrength of Legions§R or §YSubspace Ephapse§R civic.§!"
+ form_federation_requires_trade:2 "$TRIGGER_FAIL$§RRequires both you and the recipient to be either a §YMegacorporation§R, or have the §YMerchant Guilds§R civic.§!"
+ 
+ requires_test:2 "$TRIGGER_FAIL$§RTest Failure.§!"
+ requires_embassy_with_nation:2 "$TRIGGER_FAIL$§RRequire you to have an §YEmbassy§R with this empire.§!"
+ 
+ advanced_habitat_2:0 "Habitat World"

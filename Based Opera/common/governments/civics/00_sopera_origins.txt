@@ -1,0 +1,50 @@
+origin_hive_world = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/hw_origin_icon.dds"
+	picture = GFX_origin_hive_world
+	starting_colony = pc_hive
+	
+	description = "origin_tooltip_hive_world_effects"
+	
+	potential = {
+		always = yes
+	}
+	
+	possible = {
+		authority = { value = auth_hive_mind }
+		species_archetype = {
+			value = LITHOID
+		}
+	}
+	
+	random_weight = {
+		base = 1
+	}	# Makes AI able to get the origin?
+}
+
+origin_relic = {
+	is_origin = yes
+	icon = "gfx/interface/icons/dlc/ancient_relics.dds"
+	picture = GFX_evt_ancient_databank
+
+	playable = {
+		
+	}
+
+	possible = {
+	
+	}
+
+	description = civic_tooltip_relic
+
+	modifier = {
+		
+
+	}
+
+	advanced_start = no
+
+	random_weight = {
+		base = 10
+	}
+}

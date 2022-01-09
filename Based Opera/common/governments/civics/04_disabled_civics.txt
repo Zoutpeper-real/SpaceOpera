@@ -1,0 +1,125 @@
+civic_feudal_realm = {
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	random_weight = { base = 5 }
+
+	description = "civic_tooltip_feudal_realm_effects"
+	modifier = {
+		country_subject_power_penalty_mult = -0.5
+	}
+}
+
+civic_hive_devouring_swarm = {
+	modification = no
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	random_weight = { base = 5 }
+
+	description = "civic_tooltip_devouring_swarm_effects"
+	modifier = {
+		country_starbase_influence_cost_mult = -0.5
+		ship_hull_mult = 0.25
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+		army_damage_mult = 0.40
+		category_biology_research_speed_mult = 0.20
+		starbase_shipyard_build_cost_mult = -0.25
+		country_naval_cap_mult = 0.33
+	}
+
+	swap_type = {
+		name = civic_hive_devouring_swarm_lithoid
+		description = "civic_tooltip_devouring_swarm_lithoid_effects"
+
+		trigger = {
+			local_human_species_class = LITHOID
+		}
+	}
+}
+
+civic_machine_terminator = {
+	potential = {
+		always = no
+	}
+	starting_colony = pc_nuked # Changes homeworld class regardless of what is picked for empire
+	possible = {
+		always = no
+	}
+	modification = no
+	random_weight = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		}
+	}
+	description = civic_tooltip_machine_terminator_effects
+	modifier = {
+		country_starbase_influence_cost_mult = -0.3
+		ship_weapon_damage = 0.25
+		starbase_shipyard_build_cost_mult = -0.15
+		country_naval_cap_mult = 0.33
+	}
+}
+
+civic_machine_assimilator = {
+	potential = { always = no }
+	possible = {
+		always = no
+	}
+	modification = no
+	random_weight = {
+		base = 5
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		}
+		modifier = {
+			# civic has no effect after galaxy generation, disable for random generation
+			factor = 0
+			has_global_flag = game_started
+		}
+	}
+	description = civic_tooltip_machine_assimilator_effects
+	has_secondary_species = {	# see game_start.11
+		title = civic_machine_assimilator_secondary_species
+		traits = {
+			trait = trait_cybernetic
+		}
+	}
+}
+
+civic_fanatic_purifiers = {
+	modification = no
+	playable = { host_has_dlc = "Utopia" }
+	ai_playable = { host_has_dlc = "Utopia" }
+	potential = {
+		always = no
+	}
+	possible = {
+		always = no
+	}
+	random_weight = {
+		base = 1000
+		modifier = {
+			factor = 0
+			NOT = { host_has_dlc = "Utopia" }
+		}
+	}
+
+	description = "civic_tooltip_fanatic_purifiers_effects"
+	modifier = {
+		ship_fire_rate_mult = 0.33
+		army_damage_mult = 0.33
+		starbase_shipyard_build_cost_mult = -0.15
+		country_naval_cap_mult = 0.33
+	}
+}

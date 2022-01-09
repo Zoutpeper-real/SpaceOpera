@@ -1,0 +1,206 @@
+# operation_type_name = {           # Key of the site, used for name lookup etc.
+#   target = <target type>          # Valid target types are country, megastructure, starbase, fleet, army, pop_faction, spynetwork, federation and none (spy network target is the target then)
+#   picture = <sprite key>          # GFX_* sprite key for the operation image
+#   desc = <triggered event desc>   # Description generator for the operation, with scope this=spy network
+#   stages = <int>                  # Should match number of defined stages below.
+#   potential = <trigger>           # Trigger checking if a scope with this=spy network is potential to use (this will add/remove this operation without giving the player a reason).
+#   allow = <trigger>               # Trigger checking if a scope with this=spy network is allowed to use (this will toggle enable/disabled mode on buttons etc).
+#   stage = {                       # Stage definition, order dependent.
+#       difficulty = <interval int> # min max interval type. interval is defined either by '<int>' or '{ min = <int> max=<int> }' where the later will randomize a value between min and max.
+#       icon = <string>             # icon gfx type.
+#       event = <string>            # event to fire when finished the state.
+#   }
+#   stage = {...}                   # Second stage, the total number of 'stage' entries should match value of 'stages'
+#   on_roll_failed = <effect>       # Effect to fire when a roll fails, with scope this=spy operation.
+#   on_create = <effect>            # Effect to fire upon operation creation, with scope this=spy operation.
+#}
+
+# Written by: monatomic
+
+@diff_t0 = 4
+@diff_t1 = 5
+@diff_t2 = 6
+@diff_t3 = 7
+@diff_t4 = 8
+@diff_t5 = 9
+@diff_t6 = 10
+@diff_t7 = 11
+@diff_t8 = 12
+@diff_t9 = 13
+
+@operationTargetedByTimer = 10800 #30 years during which the effects of an operation may be felt by select Spy Network events
+
+# this = operation
+# from = operation target
+
+operation_acquire_branch_office = {
+    categories = { op_cat_provocation op_cat_economy }
+    picture = GFX_evt_pirate_armada
+    desc = operation_acquire_branch_office_desc
+    stages = 3
+    spy_power_cost = 10 # TODO 60
+
+    target = none #country
+
+    resources = {
+        category = operations
+        cost = {
+            energy = 3600
+        }
+        upkeep = {
+            energy = 12
+        }
+    }
+
+    potential = {
+        owner = {
+            is_country_type = default
+            is_megacorp = yes
+            #has_authority = auth_corporate
+            #is_subject = no
+        }
+        target = { has_authority = auth_corporate }
+    }
+    #target_potential = {
+    #    is_country_type = default
+    #    has_authority = auth_corporate
+    #    NOT = { is_same_value = prev.owner }
+    #}
+    allow = {
+        custom_tooltip = {
+            fail_text = operation_acquire_branch_office_existing_activity
+            target = { NOT = { has_country_flag = target_of_operation_acquire_branch_office } }
+        }
+        custom_tooltip = {
+            is_running_espionage_operation = no
+            fail_text = operation_one_at_a_time
+        }
+        #custom_tooltip 
+        #    fail_text = operation_acquire_branch_office_no_eligible_target
+        target = { has_authority = auth_corporate }
+        target = { NOT = { is_in_federation_with = root.owner } }
+        OR = {
+            AND = {
+                root.owner = { is_criminal_syndicate = yes }
+                any_country = {
+                    NOT = { is_in_federation_with = root.owner }
+                    any_owned_planet = {
+                        has_branch_office = root.target
+                    }
+                }
+            }
+            AND = {
+                root.owner = { is_criminal_syndicate = no }
+                any_country = {
+                    OR = {
+                        has_commercial_pact = root.owner
+                        is_in_federation_with = root.owner
+                    }
+                    any_owned_planet = {
+                        has_branch_office = root.target
+                    }
+                }
+            }
+        }
+    }
+    stage = {
+        difficulty = @diff_t0  #TODO @diff_t6
+        icon = GFX_espionage_chapter_icon_surveillance
+        event = operation.62000 #operation.6200
+    }
+    stage = {
+        difficulty = @diff_t0  #TODO @diff_t6
+        icon = GFX_espionage_chapter_icon_target
+        event = operation.62001 #operation.6201
+    }
+    stage = {
+        difficulty = @diff_t0  #TODO @diff_t6
+        icon = GFX_espionage_chapter_icon_motion
+        event = operation.62002 #operation.6202
+    }
+    on_roll_failed = {
+        standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+    }
+    on_create = {}
+    abort = {}
+}
+
+
+# Destroy branch office
+operation_destroy_branch_office = {
+    categories = { op_cat_sabotage op_cat_economy }
+    picture = GFX_evt_pirate_armada
+    desc = operation_destroy_branch_office_desc
+    stages = 2
+    spy_power_cost = 10 # TODO 45
+
+
+    target = none # country
+
+    resources = {
+        category = operations
+        cost = {
+            energy = 2400
+        }
+        upkeep = {
+            energy = 9
+        }
+    }
+    potential = {
+        owner = { is_megacorp = no }
+        target = { is_megacorp = yes }
+    }
+    allow = {
+        custom_tooltip = {
+            fail_text = operation_destroy_branch_office_existing_activity
+            target = { NOT = { has_country_flag = target_of_operation_destroy_branch_office } }
+        }
+        custom_tooltip = {
+            is_running_espionage_operation = no
+            fail_text = operation_one_at_a_time
+        }
+        target = {
+            NOT = { 
+                is_in_federation_with = root.owner
+            }
+        }
+        any_country = {
+            OR = {
+                is_in_federation_with = root.owner
+                is_same_empire = root.owner
+            }
+            NOT = { has_commercial_pact = from.target }
+            any_owned_planet = {
+                has_branch_office = root.target
+            }
+        }
+    }
+    # target_potential = {
+    #     OR = {
+    #         is_in_federation_with = root.owner
+    #         has_commercial_pact = root.owner
+    #         is_same_empire = root.owner
+    #     }
+    # }
+    # target_allow = {
+    #     any_owned_planet = {
+    #         has_branch_office = 
+    #     }
+    # }
+    
+    stage = {
+        difficulty = @diff_t0 #@diff_t4
+        icon = GFX_espionage_chapter_icon_surveillance
+        event = operation.62100
+    }
+    stage = {
+        difficulty = @diff_t0 #@diff_t4
+        icon = GFX_espionage_chapter_icon_motion
+        event = operation.62101
+    }
+    on_roll_failed = {
+        standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+    }
+    on_create = {}
+    abort = {}
+}

@@ -1,0 +1,48 @@
+cb_plunder_relic = {
+    show_in_diplomacy = no
+    show_notification = yes
+    potential = {
+	#host_has_dlc = "Ancient Relics Story Pack"
+        is_country_type = default
+        is_subject = no
+        #NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { is_in_federation_with = from }
+    }
+    is_valid = {
+		OR = {
+			intel = { who = from value = 50 }
+			AND = {
+				intel = { who = from value = 40 }
+				from = { has_modifier = relic_activation_cooldown }
+			}
+		}
+		from = {
+			OR = {
+				has_relic = r_dragon_trophy
+				has_relic = r_khans_throne
+				has_relic = r_worm_scales
+				has_relic = r_rubricator
+				has_relic = r_galaxy
+				has_relic = r_omnicodex
+				has_relic = r_surveyor
+				has_relic = r_galatron
+				has_relic = r_ancient_sword
+				has_relic = r_severed_head
+				has_relic = r_prethoryn_queen
+				has_relic = r_unbidden_warlock
+				has_relic = r_contingency_core
+				has_relic = r_zro_crystal
+				has_relic = r_the_last_baol
+				has_relic = r_the_defragmentor
+				has_relic = r_reality_perforator
+				has_relic = r_pox_sample
+				has_relic = r_cryo_core
+				has_relic = r_war_forge
+			}
+            
+            #has_closed_borders = prev
+        }
+        #has_total_war_cb = no
+        NOT = { is_overlord_to = FROM }
+    }
+}

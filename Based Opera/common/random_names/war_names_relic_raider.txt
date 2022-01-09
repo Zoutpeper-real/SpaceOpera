@@ -1,0 +1,21 @@
+war_name_parts_list = {
+	key = "plunder_relic_war_names"
+	parts = {
+		"War_of_Relic" = 1
+		"Treasury_War" = 1
+	}
+}
+
+war_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 999
+			using_war_goal = {
+				type = wg_plunder_one_relic
+				owner = attacker
+			}
+		}
+	}
+	format = "[This.MainAttacker.GetAdj] - [This.MainDefender.GetAdj] <plunder_relic_war_names>"
+}

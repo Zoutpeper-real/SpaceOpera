@@ -1,0 +1,40 @@
+tr_diplomacy_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		envoys_add = 1 #Space Opera
+	}	
+	on_enabled = {
+		add_research_option = tech_form_federations #Space Opera
+		add_tech_progress = {
+			tech = tech_form_federations
+			progress = 0.12
+		}
+	}
+}
+
+tr_diplomacy_direct_diplomacy = {
+	possible = {
+		has_tradition = tr_diplomacy_diplomatic_networking
+	}
+
+	modifier = {
+		diplo_weight_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+
+tr_diplomacy_the_federation = {
+
+	#unlocks federation mechanic #Space Opera: No it does not
+	modifier = {
+		envoys_add = 1
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}

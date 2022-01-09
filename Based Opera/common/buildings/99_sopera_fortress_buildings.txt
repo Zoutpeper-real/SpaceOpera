@@ -1,0 +1,92 @@
+building_fortress = {
+	base_buildtime = @b1_time
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+
+	category = army
+
+	allow = {
+		OR = {
+			AND = {
+				has_upgraded_capital = yes
+				NOT = { is_planet_class = pc_habitat
+				}
+			}
+			has_planet_flag = advanced_habitat_2
+		}
+		
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		OR = {
+			AND = {
+				num_buildings = { type = building_fortress value > 1 }
+				free_building_slots = 0
+				owner = { used_naval_capacity_percent < 0.4	}
+			}
+			buildings_no_motes = yes
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = @b2_jobs
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = @b2_jobs
+		}
+	}
+
+	resources = {
+		category = planet_buildings_strongholds
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 3
+		}
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 1
+			volatile_motes = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_global_defense_grid"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+}

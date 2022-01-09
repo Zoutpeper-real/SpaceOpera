@@ -1,0 +1,33 @@
+# Form Federation
+tech_form_federations = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { statecraft }
+	weight = @tier3weight1
+	is_rare = yes
+	
+	weight_modifier ={
+		modifier = {
+			factor = 0.1
+			years_passed < 50
+		}
+		
+		modifier = {
+			factor = 1
+			years_passed >= 50
+		}
+		
+		modifier = {
+			factor = 5
+			is_years_since_community_formation >= 40
+		}
+		
+	}
+	prereqfor_desc = {
+		custom = {
+			title = "tech_form_federations_partial_custom"
+			desc = "tech_form_federations_partial_custom_desc"
+		}
+	}
+}

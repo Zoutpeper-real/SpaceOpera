@@ -1,0 +1,37 @@
+#Perks Example
+#<perk_name>={
+#	Modifier for federation scope
+#	federation_modifier = {}
+#	Modifier for all members (leader included)
+#	members_modifier = {}
+#	Modifier for exclusevely leader
+#	leader_modifier = {}
+#	On activate effect in federation scope
+#	on_activate = {}
+#	On deactivate effect in federation scope
+#}
+
+
+research_share_1 = {
+	members_modifier = {
+		num_tech_alternatives_add = 1
+	}
+}
+
+research_share_3 = {
+	members_modifier = {
+		intel_encryption_add = 1
+	}
+}
+
+research_share_4 = {
+	members_modifier = {
+		intel_encryption_add = 2
+	}
+}
+
+president_option_1 = {
+	leader_modifier = {
+		planet_researchers_upkeep_mult = -0.15
+	}
+}

@@ -1,0 +1,16 @@
+﻿l_english:
+ ####################################
+ # Alpha Naming Convention - WILL LIKELY BE CHANGED IF SECTIONS ARE REDESIGNED
+ #
+ # Mid sections have a flavor-name fitting to number of weapon/utility slots followed by the key-word "Core"
+ # Front sections have a flavor-name followed by the key-word "Breaker"
+ # Rear sections have a flavor-name followed by the key-word "Bulwark"
+ #
+ ####################################
+ 
+
+ ####################################
+ # Cruiser
+ ####################################
+ CRUISER_BOW_MI2:2 "Missile Barrage Bow"
+ CRUISER_MID_MI3:2 "Missile Barrage Core"

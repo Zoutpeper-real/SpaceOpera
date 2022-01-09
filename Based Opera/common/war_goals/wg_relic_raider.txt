@@ -1,0 +1,53 @@
+wg_plunder_one_relic = {
+	casus_belli = cb_plunder_relic
+	hide_if_no_cb = yes
+	cede_claims = no
+	release_occupied_systems_on_status_quo = no
+	surrender_acceptance = -40
+
+	potential = {
+		#has_total_war_cb = no
+	}
+
+	possible = {
+		always = yes
+	}
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	on_accept = {
+		steal_relic = {
+			target = from
+			relic = random
+		}
+		
+		from = {
+			add_threat = {
+				who = root
+				amount = 1
+ 			}
+			
+			
+		}
+	}
+
+	on_status_quo = {
+		from = {
+			set_closed_borders = {
+				who = prev
+				status = no
+			}
+		}
+	}
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.1
+			has_ethic = ethic_gestalt_consciousness
+		}
+	}
+}
+
+

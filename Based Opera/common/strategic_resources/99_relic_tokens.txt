@@ -1,0 +1,220 @@
+token_dragon_trophy = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_khans_throne = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_worm_scales = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_rubricator = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_galaxy = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_omnicodex = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_surveyor = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_galatron = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_ancient_sword = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_severed_head = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_prethoryn_queen = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_unbidden_warlock = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_contingency_core = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_zro_crystal = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_the_last_baol = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_the_defragmentor = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_reality_perforator = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_pox_sample = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_cryo_core = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}
+token_war_forge = {
+    tradable = yes
+	max = 1000
+	fixed_max_amount = yes
+	ai_wants = {
+		base = 1000
+	}
+	ai_weight = {
+		weight = 10
+	}
+}

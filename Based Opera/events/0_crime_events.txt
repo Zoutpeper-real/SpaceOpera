@@ -1,0 +1,12 @@
+namespace = crime
+
+# Never close crime syndicate's branch offices due to low crime
+event = {
+    id = crime.1000
+
+    is_triggered_only = yes
+    trigger = { always = no }
+    immediate = {
+    }
+}
+

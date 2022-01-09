@@ -1,4 +1,4 @@
-version="0.3"
+version="0.4"
 tags={
 	"Balance"
 	"Diplomacy"
@@ -10,6 +10,6 @@ tags={
 }
 name="Based Opera: A Multiplayer Experience"
 picture="thumbnail.png"
-supported_version="3.1.2"
+supported_version="3.2.2"
 path="A:/Documents - data drive/Paradox Interactive/Stellaris/mod/Based Opera"
 remote_file_id="2608600651"
